@@ -103,7 +103,7 @@
   <h1 id="一、刷机前的准备工作和说明"><a href="#一、刷机前的准备工作和说明" class="headerlink" title="一、刷机前的准备工作和说明"></a>一、刷机前的准备工作和说明</h1><p>教程开始前请自行在网上寻找自己设备的root固件并刷入，否则可能无法正常食用本教程。本教程使用的设备是数码视讯Q5，这一系列教程都使用的这个设备。</p>
 <p>在食用本教程之前请先上网查询Armbian是否支持自己的设备，附上<a target="_blank" rel="noopener" href="https://www.armbian.com/">Armbian</a>官方网站。</p>
 <p>Armbian主要分为Debian和Ubuntu两个版本，具体如下图：</p>
-<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cdc4.png" width="1680px" />
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cdc4.png">
 
 <p>其中bionic是Ubuntu的一个版本，buster是Debian的一个版本；带desktop的表示有桌面，不带的是命令行版本，推荐安装不带桌面的版本，用命令行它不香吗？</p>
 <p>本教程使用的镜像版本为：Armbian_20.05.5_Arm-64_bionic_current_5.7.0-rc7_20200527.img.xz！</p>
@@ -120,18 +120,25 @@
 <p>8.小丸工具箱：强大的压制视频软件 <a target="_blank" rel="noopener" href="https://maruko.appinn.me/">小丸工具箱</a></p>
 <p>如果链接失效请自行百度！</p>
 <h1 id="二、刷入Armbian"><a href="#二、刷入Armbian" class="headerlink" title="二、刷入Armbian"></a>二、刷入Armbian</h1><p>U盘或者内存卡插入电脑，打开安装好的rufus，按下图操作，等待写入完成。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B/rufus.png" alt="示例图片1"></p>
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cddd.png" widt>
+
 <h1 id="三、替换uEnv-txt文件"><a href="#三、替换uEnv-txt文件" class="headerlink" title="三、替换uEnv.txt文件"></a>三、替换uEnv.txt文件</h1><p>写入完成之后打开BOOT分区，在dtb文件夹里找到相对应的dtb，然后复制dtb文件名，回到根目录找到uEnv.txt文件，删掉前面的#，用刚复制的文件名替换掉uEnv.txt文件里的dtb文件名，保存并退出，插入内存卡开机，在电视系统里运行Reboor to LibreELEU点击确定，切换到Armbian系统。</p>
 <p>如果想要查询设备的型号，在安卓终端模拟器下或者TTL下输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;proc&#x2F;device-tree&#x2F;amlogic-dt-id</span><br></pre></td></tr></table></figure>
 
 <p>返回的即为设备的型号。</p>
 <p>斐讯N1的DTB文件名为：meson-gxl-s905d-phicomm-n1</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B/dtb.png" alt="示例图片2"><br><img src="Armbian%E6%95%99%E7%A8%8B/uEnv.png" alt="示例图片3"></p>
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cdc8.png">
+<img src="https://img.imgdb.cn/item/607b21668322e6675cb5df0e.png">
+
 <h1 id="四、初始化Armbian"><a href="#四、初始化Armbian" class="headerlink" title="四、初始化Armbian"></a>四、初始化Armbian</h1><p>切换到Armbian系统之后，等待编译完成，按照示例图片中输入相应内容。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B/%E5%88%9D%E5%A7%8B%E5%8C%96.png" alt="示例图片4"><br><img src="Armbian%E6%95%99%E7%A8%8B/%E5%88%9D%E5%A7%8B%E5%8C%962.png" alt="示例图片5"></p>
+<img src="https://img.imgdb.cn/item/607b21668322e6675cb5df10.png">
+<img src="https://img.imgdb.cn/item/607b21668322e6675cb5df16.png">
+
 <h1 id="五、putty的使用"><a href="#五、putty的使用" class="headerlink" title="五、putty的使用"></a>五、putty的使用</h1><p>步骤4可以使用putty远程操控完成，插上网线再开机，在路由器的管理界面中找到设备的ip地址记下来，打开putty。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B/putty.png" alt="示例图片6"><br><img src="Armbian%E6%95%99%E7%A8%8B/putty2.png" alt="示例图片7"></p>
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cdcd.png">
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cdd4.png">
+
 <p>点击是，然后重复步骤4的操作即可！</p>
 <h1 id="六、设置中国时间并汉化armbian"><a href="#六、设置中国时间并汉化armbian" class="headerlink" title="六、设置中国时间并汉化armbian"></a>六、设置中国时间并汉化armbian</h1><h2 id="1-设置中国时间"><a href="#1-设置中国时间" class="headerlink" title="1.设置中国时间"></a>1.设置中国时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime &amp;&amp; echo &quot;Asia&#x2F;Shanghai&quot; &gt; &#x2F;etc&#x2F;timezone</span><br></pre></td></tr></table></figure>
 
