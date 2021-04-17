@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
+    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
+    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
+<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E7%9B%B4%E6%92%AD%E9%97%B4.png" alt="示例图片1"></p>
+<span id="more"></span>
+
+<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
+<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/winrar.png" alt="示例图片2"></p>
+<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/winrar2.png" alt="示例图片3"><br>这样就把多个mp3文件合并成为一个mp3文件了。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
+<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E5%B0%8F%E4%B8%B8.png" alt="示例图片4"></p>
+<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
+<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E7%9B%B4%E6%92%AD%E7%A0%81.png" alt="示例图片5"></p>
+<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<p>#单文件循环推流</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
+
+<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
+<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
+<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
+<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
+<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
+<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Emuelec纯净版使用方法（一）</title>
     <url>/2020/07/01/Emuelec/</url>
     <content><![CDATA[<p><img src="Emuelec/emuelec.jpg" alt="示例图片1"></p>
@@ -159,48 +201,6 @@
 ]]></content>
       <categories>
         <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
-    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
-    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E7%9B%B4%E6%92%AD%E9%97%B4.png" alt="示例图片1"></p>
-<span id="more"></span>
-
-<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
-
-<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-
-<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/winrar.png" alt="示例图片2"></p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/winrar2.png" alt="示例图片3"><br>这样就把多个mp3文件合并成为一个mp3文件了。</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E5%B0%8F%E4%B8%B8.png" alt="示例图片4"></p>
-<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
-<p><img src="Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/%E7%9B%B4%E6%92%AD%E7%A0%81.png" alt="示例图片5"></p>
-<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<p>#单文件循环推流</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
-
-<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
-<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
-<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
-<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
-<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
-<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
       </categories>
   </entry>
   <entry>
