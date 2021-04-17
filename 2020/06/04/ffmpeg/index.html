@@ -100,7 +100,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>前面写的<a href="%E5%BB%BAhttps://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/">Armbian教程（二）</a>)简单说明了利用ffmpeg推流到<a target="_blank" rel="noopener" href="https://www.bilibili.com/">哔哩哔哩</a>进行直播的方法，但是对于如何实现列表顺序播放和推流命令的意思没有详细的说明，这篇教程来进行讲解。<br>已经搭建好的直播间：<a target="_blank" rel="noopener" href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a><br><img src="ffmpeg/%E7%9B%B4%E6%92%AD%E9%97%B4.png" alt="示例图片1"></p>
+  <p>前面写的<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/">Armbian教程（二）</a>简单说明了利用ffmpeg推流到<a target="_blank" rel="noopener" href="https://www.bilibili.com/">哔哩哔哩</a>进行直播的方法，但是对于如何实现列表顺序播放和推流命令的意思没有详细的说明，这篇教程来进行讲解。<br>已经搭建好的直播间：<a target="_blank" rel="noopener" href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a><br><img src="ffmpeg/%E7%9B%B4%E6%92%AD%E9%97%B4.png" alt="示例图片1"></p>
 <span id="more"></span>
 <h1 id="一、如何实现列表顺序播放"><a href="#一、如何实现列表顺序播放" class="headerlink" title="一、如何实现列表顺序播放"></a>一、如何实现列表顺序播放</h1><h3 id="1、音频文件列表顺序播放"><a href="#1、音频文件列表顺序播放" class="headerlink" title="1、音频文件列表顺序播放"></a>1、音频文件列表顺序播放</h3><p>怎么把音频文件转换成视频在<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里说了就不说了，下面说一下怎么让音频按照你想要的顺序播放：<br>1.把想要合并的mp3文件放到一个文件夹<br>2.对mp3文件进行重命名，按照你想要的顺序在前面加上1、2、3……<br>3.按名称进行排序，然后合并成一个文件，如何合并成一个文件<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里有教。</p>
 <h3 id="2、视频文件列表循环播放"><a href="#2、视频文件列表循环播放" class="headerlink" title="2、视频文件列表循环播放"></a>2、视频文件列表循环播放</h3><p>1.首先新建一个文本文档，命名为mylist.txt。<br>2.编辑mylist.tx的内容，复制下列命令粘贴到mylist.txt里：</p>
