@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
-    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
-    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
-<span id="more"></span>
-
-<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
-
-<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-
-<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
-
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
-这样就把多个mp3文件合并成为一个mp3文件了。
-
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
-
-<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
-
-<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<p>#单文件循环推流</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
-
-<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
-<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
-<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
-<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
-<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
-<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Armbian系列教程-刷机与初始化设置</title>
     <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="一、刷机前的准备工作和说明"><a href="#一、刷机前的准备工作和说明" class="headerlink" title="一、刷机前的准备工作和说明"></a>一、刷机前的准备工作和说明</h1><p>教程开始前请自行在网上寻找自己设备的root固件并刷入，否则可能无法正常食用本教程。本教程使用的设备是数码视讯Q5，这一系列教程都使用的这个设备。</p>
@@ -196,57 +149,50 @@
       </categories>
   </entry>
   <entry>
-    <title>Emuelec纯净版使用方法（三）</title>
-    <url>/2020/07/07/Emuelec3/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
-<p>首先放几张图给大家看看：</p>
+    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
+    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
+    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
 <span id="more"></span>
 
-<p><img src="Emuelec3/gba.jpg" alt="示例图片2"></p>
-<p><img src="Emuelec3/nes.jpg" alt="示例图片3"></p>
-<p><img src="Emuelec3/3.jpg" alt="示例图片4"></p>
-<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
-<p><img src="Emuelec3/%E4%B8%BB%E9%A2%98.png" alt="示例图片5"></p>
-<p><img src="Emuelec3/sz.jpg" alt="示例图片6"></p>
-]]></content>
-      <categories>
-        <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Emuelec纯净版使用方法（二）</title>
-    <url>/2020/07/05/Emuelec2/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
 
-<h1 id="一、更改Emuelec时区"><a href="#一、更改Emuelec时区" class="headerlink" title="一、更改Emuelec时区"></a>一、更改Emuelec时区</h1><p>因为Emuelec的作者是墨西哥人，所以Emuelec的默认时区为墨西哥。要修改时区为中国，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后打开/emuelec/configs/emuelec.conf  ，找到timezone然后改成：</p>
-<span id="more"></span>
+<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">system.timezone&#x3D;Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure>
+<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
 
-<p>保存并退出，然后重启Emuelec，时区就改好了。</p>
-<p>Emuelec默认的账号和密码为：root，emuelec。</p>
-<p><img src="Emuelec2/winscp.png" alt="示例图片1"></p>
-<p><img src="Emuelec2/winscp2.png" alt="示例图片2"></p>
-<p><img src="Emuelec2/winscp3.png" alt="示例图片3"></p>
-<h1 id="二、汉化RA"><a href="#二、汉化RA" class="headerlink" title="二、汉化RA"></a>二、汉化RA</h1><p>Emuelec前端自带官方汉化，但是RA界面因为自带的字体有问题，如果选择中文简体的话，字体会变成乱码；</p>
-<p>1、首先下载字体<a href="https://pan.baidu.com/s/19qfuDoRjT4Vfvu3rA9Bxmg">提取码：dl55</a>，然后用winscp登录Emuelec，打开/storage/assets/ozone文件夹，用下载好的字体文件替换掉原来的，然后重启Emuelec。</p>
-<p><img src="Emuelec2/RA.png" alt="示例图片4"></p>
-<p>2、进入RA，设置（Settings）—用户（User）—语言（Language)—简体中文；界面—开启显示高级设置；菜单—配置文件—保存当前配置。RA汉化完成。1-2适用于Emuelec3.5及之前的版本，如果你的Emuelec版本是3.6，请往下看！</p>
-<p><img src="Emuelec2/RA2.jpg" alt="示例图片5"></p>
-<p><img src="Emuelec2/RA3.jpg" alt="示例图片6"></p>
-<p><img src="Emuelec2/RA4.jpg" alt="示例图片7"></p>
-<p><img src="Emuelec2/RA5.jpg" alt="示例图片8"></p>
-<p><img src="Emuelec2/RA6.jpg" alt="示例图片9"></p>
-<p>3、Emuelec3.6使用1-2的教程替换文件之后，还是会乱码，这时候需要再进行一步操作才能完成汉化，下载<a href="https://pan.baidu.com/s/18pjKCBnlZZxtHjBDpwjr6g">提取码：c17n</a>之后，把它解压到assets文件夹里面然后重启Emuelec，就完成汉化了。</p>
-<p><img src="Emuelec2/pkg.jpg" alt="示例图片10"></p>
-<p>教程3由群友回忆（879430967）和寒雪使者（1129612217）提供。</p>
+<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
+
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
+这样就把多个mp3文件合并成为一个mp3文件了。
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
+
+<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
+
+<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<p>#单文件循环推流</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
+
+<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
+<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
+<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
+<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
 <p>本教程参考以下文章：</p>
-<p><a href="https://www.cnblogs.com/milton/p/11971119.html">EmuELEC笔记</a></p>
+<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
+<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
+<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
 ]]></content>
       <categories>
-        <category>Emuelec</category>
+        <category>Armbian</category>
       </categories>
   </entry>
   <entry>
@@ -269,6 +215,75 @@
 ]]></content>
       <categories>
         <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Emuelec纯净版使用方法（三）</title>
+    <url>/2020/07/07/Emuelec3/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
+<p>首先放几张图给大家看看：</p>
+<span id="more"></span>
+
+<p><img src="Emuelec3/gba.jpg" alt="示例图片2"></p>
+<p><img src="Emuelec3/nes.jpg" alt="示例图片3"></p>
+<p><img src="Emuelec3/3.jpg" alt="示例图片4"></p>
+<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
+<p><img src="Emuelec3/%E4%B8%BB%E9%A2%98.png" alt="示例图片5"></p>
+<p><img src="Emuelec3/sz.jpg" alt="示例图片6"></p>
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Armbian系列教程-解决安装某些程序卡死问题</title>
+    <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
+    <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
+<span id="more"></span>
+
+<h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先确保系统中有足够的空间来用做swap交换空间，然后执行下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir image</span><br><span class="line">sudo touch swap</span><br></pre></td></tr></table></figure>
+
+<p>关于新建image文件，也可以用winscp找到/opt/，在目录下面新建image文件夹，/opt/image，然后执行<code>sudo touch swap</code>就行了。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>添加交换文件并设置其大小为2G，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;image&#x2F;swap bs&#x3D;1024 count&#x3D;2048000</span><br></pre></td></tr></table></figure>
+
+<p>等待一会儿，会返回如下结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2048000+0 records in</span><br><span class="line">2048000+0 records out</span><br><span class="line">2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB&#x2F;s</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>创建（设置）交换空间，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkswap &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>检查现有的交换空间大小，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>启动新增加的2G的交换空间，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo swapon &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
+
+<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>确认新增加的2G交换空间已经生效，执行如下命令查看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
+
+<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
+
+<p>按<code>i</code>键进入插入模式，在最后添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;image&#x2F;swap    &#x2F;swap    swap    defaults 0 0</span><br></pre></td></tr></table></figure>
+
+<p>按<code>esc</code>键退出插入模式，按<code>Shift+z z</code> 就可以保存修改内容并退出。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://blog.csdn.net/lzh_86/article/details/79450793?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">linux下如何保存退出vim编辑器</a></p>
+<p><a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a></p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
       </categories>
   </entry>
   <entry>
@@ -327,52 +342,49 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian系列教程-解决安装某些程序卡死问题</title>
-    <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
-    <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
+    <title>Emuelec纯净版使用方法（二）</title>
+    <url>/2020/07/05/Emuelec2/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="一、更改Emuelec时区"><a href="#一、更改Emuelec时区" class="headerlink" title="一、更改Emuelec时区"></a>一、更改Emuelec时区</h1><p>因为Emuelec的作者是墨西哥人，所以Emuelec的默认时区为墨西哥。要修改时区为中国，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后打开/emuelec/configs/emuelec.conf  ，找到timezone然后改成：</p>
 <span id="more"></span>
 
-<h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先确保系统中有足够的空间来用做swap交换空间，然后执行下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir image</span><br><span class="line">sudo touch swap</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">system.timezone&#x3D;Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure>
 
-<p>关于新建image文件，也可以用winscp找到/opt/，在目录下面新建image文件夹，/opt/image，然后执行<code>sudo touch swap</code>就行了。</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>添加交换文件并设置其大小为2G，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;image&#x2F;swap bs&#x3D;1024 count&#x3D;2048000</span><br></pre></td></tr></table></figure>
-
-<p>等待一会儿，会返回如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2048000+0 records in</span><br><span class="line">2048000+0 records out</span><br><span class="line">2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB&#x2F;s</span><br></pre></td></tr></table></figure>
-
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>创建（设置）交换空间，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkswap &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
-
-<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>检查现有的交换空间大小，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
-
-<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>启动新增加的2G的交换空间，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo swapon &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
-
-<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>确认新增加的2G交换空间已经生效，执行如下命令查看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
-
-<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
-
-<p>按<code>i</code>键进入插入模式，在最后添加如下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;image&#x2F;swap    &#x2F;swap    swap    defaults 0 0</span><br></pre></td></tr></table></figure>
-
-<p>按<code>esc</code>键退出插入模式，按<code>Shift+z z</code> 就可以保存修改内容并退出。</p>
+<p>保存并退出，然后重启Emuelec，时区就改好了。</p>
+<p>Emuelec默认的账号和密码为：root，emuelec。</p>
+<p><img src="Emuelec2/winscp.png" alt="示例图片1"></p>
+<p><img src="Emuelec2/winscp2.png" alt="示例图片2"></p>
+<p><img src="Emuelec2/winscp3.png" alt="示例图片3"></p>
+<h1 id="二、汉化RA"><a href="#二、汉化RA" class="headerlink" title="二、汉化RA"></a>二、汉化RA</h1><p>Emuelec前端自带官方汉化，但是RA界面因为自带的字体有问题，如果选择中文简体的话，字体会变成乱码；</p>
+<p>1、首先下载字体<a href="https://pan.baidu.com/s/19qfuDoRjT4Vfvu3rA9Bxmg">提取码：dl55</a>，然后用winscp登录Emuelec，打开/storage/assets/ozone文件夹，用下载好的字体文件替换掉原来的，然后重启Emuelec。</p>
+<p><img src="Emuelec2/RA.png" alt="示例图片4"></p>
+<p>2、进入RA，设置（Settings）—用户（User）—语言（Language)—简体中文；界面—开启显示高级设置；菜单—配置文件—保存当前配置。RA汉化完成。1-2适用于Emuelec3.5及之前的版本，如果你的Emuelec版本是3.6，请往下看！</p>
+<p><img src="Emuelec2/RA2.jpg" alt="示例图片5"></p>
+<p><img src="Emuelec2/RA3.jpg" alt="示例图片6"></p>
+<p><img src="Emuelec2/RA4.jpg" alt="示例图片7"></p>
+<p><img src="Emuelec2/RA5.jpg" alt="示例图片8"></p>
+<p><img src="Emuelec2/RA6.jpg" alt="示例图片9"></p>
+<p>3、Emuelec3.6使用1-2的教程替换文件之后，还是会乱码，这时候需要再进行一步操作才能完成汉化，下载<a href="https://pan.baidu.com/s/18pjKCBnlZZxtHjBDpwjr6g">提取码：c17n</a>之后，把它解压到assets文件夹里面然后重启Emuelec，就完成汉化了。</p>
+<p><img src="Emuelec2/pkg.jpg" alt="示例图片10"></p>
+<p>教程3由群友回忆（879430967）和寒雪使者（1129612217）提供。</p>
 <p>本教程参考以下文章：</p>
-<p><a href="https://blog.csdn.net/lzh_86/article/details/79450793?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">linux下如何保存退出vim编辑器</a></p>
-<p><a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a></p>
+<p><a href="https://www.cnblogs.com/milton/p/11971119.html">EmuELEC笔记</a></p>
 ]]></content>
       <categories>
-        <category>Armbian</category>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>影视资源站-站长必备</title>
+    <url>/2020/12/19/ziyuan/</url>
+    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
+
+<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
+<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -441,18 +453,6 @@
 ]]></content>
       <categories>
         <category>博客日志</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>影视资源站-站长必备</title>
-    <url>/2020/12/19/ziyuan/</url>
-    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
-
-<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
-<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
