@@ -298,14 +298,6 @@ var _hmt = _hmt || [];
     padding-left: 10px;
   }
 </style>
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
 <style>
 .v[data-class=v] .veditor {
     background-image: url(https://gitee.com/wugenqiang/PictureBed/raw/master/CS-Notes/20200425091751.png);
