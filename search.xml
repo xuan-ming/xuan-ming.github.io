@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Emuelec纯净版使用方法（一）</title>
+    <url>/2020/07/01/Emuelec/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>本教程使用的版本为最新的Emuelec3.6，本教程适用于Emuelec，仅供爱好者们学习交流使用！禁止用作他用！</p>
+<p>使用前请查询设备是否支持emuelec系统，请查看<a href="https://github.com/EmuELEC/EmuELEC/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E---Chinese-guide">emuelec中文文档</a>！</p>
+<span id="more"></span>
+
+<p>准备需要的工具和文件，下载并安装</p>
+<p>1、Emuelec镜像：<a href="https://github.com/EmuELEC/EmuELEC/releases">官方纯净版</a></p>
+<p>2、rufus：<a href="https://pan.baidu.com/s/174uW6fn-_aBgptdr6BCpog">提取码：2293</a></p>
+<p>3、bios：<a href="https://pan.baidu.com/s/1rSmfPtNvUS-YGK5SkY6FpQ">提取码：zz7y</a></p>
+<p>4、notepad++：自行下载安装</p>
+<p>5、Reboor to LibreELEU:<a href="https://pan.baidu.com/s/1WUYGxGN9cwN5hEaPQve1jg">提取码：6p82</a></p>
+<p>6、SDFormatter：恢复内存卡空间 <a href="https://pan.baidu.com/s/1czWljlLUGlYEoX0fSe8n1Q">提取码：nw7c</a></p>
+<p>7、内存卡</p>
+<p>8、游戏手柄</p>
+<h1 id="二、刷入Emuelec系统"><a href="#二、刷入Emuelec系统" class="headerlink" title="二、刷入Emuelec系统"></a>二、刷入Emuelec系统</h1><p>打开rufus，设备：选择你要写入的对象，选择：选择前面下载好的镜像文件；点击开始，等待写入完成。</p>
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cddd.png">
+
+
+
+<p>在Emuelec分区的dtb文件夹里找到你设备的dtb文件，复制到根目录下改名为dtb.img，如有提示选择覆盖原文件即可！</p>
+<h1 id="三、初始化Emuelec"><a href="#三、初始化Emuelec" class="headerlink" title="三、初始化Emuelec"></a>三、初始化Emuelec</h1><p>插入内存卡和手柄开机，进入tv系统，安装Reboor to LibreELEU，运行Reboor to LibreELEU点击确定，会自动重启进入Emuelec系统，等待扩容完成，然后进行手柄按键映射，设置完之后就进入Emuelec系统了。</p>
+<img src="https://i.loli.net/2021/04/18/srXifnyTZ4gHeKB.png" >
+
+<img src="https://i.loli.net/2021/04/18/dbBNDxI2SzTqGRl.jpg" >
+
+
+
+<img src="https://i.loli.net/2021/04/18/37L6VpFuexdc9OA.jpg" >
+
+<h1 id="四、替换和添加相关文件"><a href="#四、替换和添加相关文件" class="headerlink" title="四、替换和添加相关文件"></a>四、替换和添加相关文件</h1><h2 id="1、添加bios"><a href="#1、添加bios" class="headerlink" title="1、添加bios"></a>1、添加bios</h2><p>盒子接入网线或者启用wifi，使电脑和盒子处于同一局域网下，打开此电脑在路径那里输入\\192.168.1.***(此为你盒子上显示的ip地址)，进入如下界面。</p>
+<img src="https://i.loli.net/2021/04/18/5n62y8Pi3Eabdmp.png" >
+
+<p>双击打开roms文件夹，找到bios文件夹，把前面下载好的bios文件解压之后，把里面的文件都复制进bios文件夹。然后重启emuelec系统这样就添加完毕了。</p>
+<h2 id="2、替换模拟核心"><a href="#2、替换模拟核心" class="headerlink" title="2、替换模拟核心"></a>2、替换模拟核心</h2><p>如果你需要替换模拟核心，在<a href="http://buildbot.libretro.com/nightly/linux/armhf/2020-07-01_cores/">这个网站</a>可以找到最新编译的核心，下载好你要替换掉的核心，然后把它复制到cores这个文件夹替换掉原来的核心就行。替换完之后记得重启emuelec系统。</p>
+<h2 id="3、添加模拟核心"><a href="#3、添加模拟核心" class="headerlink" title="3、添加模拟核心"></a>3、添加模拟核心</h2><p>添加新的模拟核心之后，想要在运行游戏时选择它，还需要编辑getcores.sh文件，在getcores.sh文件里添加这个核心才会显示在前端上，它的路径是\Emulationstation Config\scripts\，使用notepad++打开getcores.sh，在相对应的机种后面添加上模拟核心的名字，保存并退出。重启emuelec。</p>
+<img src="https://i.loli.net/2021/04/18/AcuOYldxCvgWsbo.png" >
+
+<p><img src="Emuelec/hx2.png" alt="示例图片8"></p>
+<h1 id="五、添加游戏"><a href="#五、添加游戏" class="headerlink" title="五、添加游戏"></a>五、添加游戏</h1><p>从网上下载的游戏要放进正确的文件夹里才能运行，好在emuelec系统已经提前建好了相关文件夹，在emuelec系统中游戏存放在roms文件夹里相对应的文件夹里，例如psp游戏放在roms\psp\文件夹里。重启emuelec之后游戏就会自动分类显示了。</p>
+<img src="https://i.loli.net/2021/04/18/MpLYqirz9fJujgK.png" >
+
+<h1 id="六、开始游戏"><a href="#六、开始游戏" class="headerlink" title="六、开始游戏"></a>六、开始游戏</h1><p>通过上面的步骤之后，已经大概的设置好了emuelec，可以愉快的进行游戏了！</p>
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Armbian系列教程-刷机与初始化设置</title>
     <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="一、刷机前的准备工作和说明"><a href="#一、刷机前的准备工作和说明" class="headerlink" title="一、刷机前的准备工作和说明"></a>一、刷机前的准备工作和说明</h1><p>教程开始前请自行在网上寻找自己设备的root固件并刷入，否则可能无法正常食用本教程。本教程使用的设备是数码视讯Q5，这一系列教程都使用的这个设备。</p>
@@ -145,57 +196,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Emuelec纯净版使用方法（一）</title>
-    <url>/2020/07/01/Emuelec/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>本教程使用的版本为最新的Emuelec3.6，本教程适用于Emuelec，仅供爱好者们学习交流使用！禁止用作他用！</p>
-<p>使用前请查询设备是否支持emuelec系统，请查看<a href="https://github.com/EmuELEC/EmuELEC/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E---Chinese-guide">emuelec中文文档</a>！</p>
-<span id="more"></span>
-
-<p>准备需要的工具和文件，下载并安装</p>
-<p>1、Emuelec镜像：<a href="https://github.com/EmuELEC/EmuELEC/releases">官方纯净版</a></p>
-<p>2、rufus：<a href="https://pan.baidu.com/s/174uW6fn-_aBgptdr6BCpog">提取码：2293</a></p>
-<p>3、bios：<a href="https://pan.baidu.com/s/1rSmfPtNvUS-YGK5SkY6FpQ">提取码：zz7y</a></p>
-<p>4、notepad++：自行下载安装</p>
-<p>5、Reboor to LibreELEU:<a href="https://pan.baidu.com/s/1WUYGxGN9cwN5hEaPQve1jg">提取码：6p82</a></p>
-<p>6、SDFormatter：恢复内存卡空间 <a href="https://pan.baidu.com/s/1czWljlLUGlYEoX0fSe8n1Q">提取码：nw7c</a></p>
-<p>7、内存卡</p>
-<p>8、游戏手柄</p>
-<h1 id="二、刷入Emuelec系统"><a href="#二、刷入Emuelec系统" class="headerlink" title="二、刷入Emuelec系统"></a>二、刷入Emuelec系统</h1><p>打开rufus，设备：选择你要写入的对象，选择：选择前面下载好的镜像文件；点击开始，等待写入完成。</p>
-<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cddd.png">
-
-
-
-<p>在Emuelec分区的dtb文件夹里找到你设备的dtb文件，复制到根目录下改名为dtb.img，如有提示选择覆盖原文件即可！</p>
-<h1 id="三、初始化Emuelec"><a href="#三、初始化Emuelec" class="headerlink" title="三、初始化Emuelec"></a>三、初始化Emuelec</h1><p>插入内存卡和手柄开机，进入tv系统，安装Reboor to LibreELEU，运行Reboor to LibreELEU点击确定，会自动重启进入Emuelec系统，等待扩容完成，然后进行手柄按键映射，设置完之后就进入Emuelec系统了。</p>
-<img src="https://i.loli.net/2021/04/18/srXifnyTZ4gHeKB.png" >
-
-<img src="https://i.loli.net/2021/04/18/dbBNDxI2SzTqGRl.jpg" >
-
-
-
-<img src="https://i.loli.net/2021/04/18/37L6VpFuexdc9OA.jpg" >
-
-<h1 id="四、替换和添加相关文件"><a href="#四、替换和添加相关文件" class="headerlink" title="四、替换和添加相关文件"></a>四、替换和添加相关文件</h1><h2 id="1、添加bios"><a href="#1、添加bios" class="headerlink" title="1、添加bios"></a>1、添加bios</h2><p>盒子接入网线或者启用wifi，使电脑和盒子处于同一局域网下，打开此电脑在路径那里输入\\192.168.1.***(此为你盒子上显示的ip地址)，进入如下界面。</p>
-<img src="https://i.loli.net/2021/04/18/5n62y8Pi3Eabdmp.png" >
-
-<p>双击打开roms文件夹，找到bios文件夹，把前面下载好的bios文件解压之后，把里面的文件都复制进bios文件夹。然后重启emuelec系统这样就添加完毕了。</p>
-<h2 id="2、替换模拟核心"><a href="#2、替换模拟核心" class="headerlink" title="2、替换模拟核心"></a>2、替换模拟核心</h2><p>如果你需要替换模拟核心，在<a href="http://buildbot.libretro.com/nightly/linux/armhf/2020-07-01_cores/">这个网站</a>可以找到最新编译的核心，下载好你要替换掉的核心，然后把它复制到cores这个文件夹替换掉原来的核心就行。替换完之后记得重启emuelec系统。</p>
-<h2 id="3、添加模拟核心"><a href="#3、添加模拟核心" class="headerlink" title="3、添加模拟核心"></a>3、添加模拟核心</h2><p>添加新的模拟核心之后，想要在运行游戏时选择它，还需要编辑getcores.sh文件，在getcores.sh文件里添加这个核心才会显示在前端上，它的路径是\Emulationstation Config\scripts\，使用notepad++打开getcores.sh，在相对应的机种后面添加上模拟核心的名字，保存并退出。重启emuelec。</p>
-<img src="https://i.loli.net/2021/04/18/AcuOYldxCvgWsbo.png" >
-
-<p><img src="Emuelec/hx2.png" alt="示例图片8"></p>
-<h1 id="五、添加游戏"><a href="#五、添加游戏" class="headerlink" title="五、添加游戏"></a>五、添加游戏</h1><p>从网上下载的游戏要放进正确的文件夹里才能运行，好在emuelec系统已经提前建好了相关文件夹，在emuelec系统中游戏存放在roms文件夹里相对应的文件夹里，例如psp游戏放在roms\psp\文件夹里。重启emuelec之后游戏就会自动分类显示了。</p>
-<img src="https://i.loli.net/2021/04/18/MpLYqirz9fJujgK.png" >
-
-<h1 id="六、开始游戏"><a href="#六、开始游戏" class="headerlink" title="六、开始游戏"></a>六、开始游戏</h1><p>通过上面的步骤之后，已经大概的设置好了emuelec，可以愉快的进行游戏了！</p>
-]]></content>
-      <categories>
-        <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Emuelec纯净版使用方法（二）</title>
     <url>/2020/07/05/Emuelec2/</url>
     <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
@@ -230,6 +230,26 @@
       </categories>
   </entry>
   <entry>
+    <title>Emuelec纯净版使用方法（三）</title>
+    <url>/2020/07/07/Emuelec3/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
+<p>首先放几张图给大家看看：</p>
+<span id="more"></span>
+
+<p><img src="Emuelec3/gba.jpg" alt="示例图片2"></p>
+<p><img src="Emuelec3/nes.jpg" alt="示例图片3"></p>
+<p><img src="Emuelec3/3.jpg" alt="示例图片4"></p>
+<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
+<p><img src="Emuelec3/%E4%B8%BB%E9%A2%98.png" alt="示例图片5"></p>
+<p><img src="Emuelec3/sz.jpg" alt="示例图片6"></p>
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Emuelec纯净版使用方法（四）</title>
     <url>/2020/08/06/Emuelec4/</url>
     <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
@@ -246,26 +266,6 @@
 <h2 id="六、修改游戏类型"><a href="#六、修改游戏类型" class="headerlink" title="六、修改游戏类型"></a>六、修改游戏类型</h2><p>假设需要编辑psp游戏的游戏发行时间，使用notepad++打开位于/roms/psp/文件夹里的gamelist.xml文件，找到<code>&lt;genre&gt;***&lt;/genre&gt;</code>这行（如果没有这行的话添加即可），修改<code>***</code>为相应内容即可。</p>
 <h2 id="gamelist-xml文件内容示例"><a href="#gamelist-xml文件内容示例" class="headerlink" title="gamelist.xml文件内容示例"></a>gamelist.xml文件内容示例</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;gameList&gt;</span><br><span class="line">	&lt;game&gt;</span><br><span class="line">		&lt;path&gt;.&#x2F;GTA侠盗猎车手 血战唐人街.iso&lt;&#x2F;path&gt; #游戏rom所在的路径</span><br><span class="line">		&lt;name&gt;GTA侠盗猎车手 血战唐人街&lt;&#x2F;name&gt; #游戏列表上显示的名称</span><br><span class="line">		&lt;desc&gt;李煌，帮着父亲打牌赢得的御剑飞抵自由城，将其视为传家宝送到家族的新掌 门人他的叔叔李武的手中。然而，飞机着陆后不久，李煌的保镖被袭击者杀害， 自己也中枪并被绑架，袭击者把剑抢走，并误认为李煌死了，准备把李煌的尸 体抛进河里面，李煌设法生存后，告知李武剑被人偷走。李武解释自己本打算 把剑交给陈辛。最终，李煌联系上了陈耀明，陈辛的儿子。</span><br><span class="line">在陈辛与李武的最后交锋中，李武捅伤了陈辛。随着李武背负了谋杀的罪名， 李武和李煌进行了最后一战，最终李煌杀死了李武。陈辛称赞李煌对家族的忠 诚和贵族血统，并让李煌成为黑社会老大的真正继位者。&lt;&#x2F;desc&gt; #游戏简介</span><br><span class="line">		&lt;image&gt;.&#x2F;images&#x2F;侠盗猎车手血战唐人街-image.jpg&lt;&#x2F;image&gt; #游戏图片</span><br><span class="line">		&lt;releasedate&gt;20091020T000000&lt;&#x2F;releasedate&gt; #游戏发行日期</span><br><span class="line">		&lt;developer&gt;Rockstar Leeds&lt;&#x2F;developer&gt; #游戏开发商</span><br><span class="line">		&lt;publisher&gt;Rockstar Games&lt;&#x2F;publisher&gt; #游戏出版商</span><br><span class="line">		&lt;genre&gt;动作角色扮演&lt;&#x2F;genre&gt; #游戏类型</span><br><span class="line">		&lt;playcount&gt;2333&lt;&#x2F;playcount&gt; #游玩次数，自动记录</span><br><span class="line">		&lt;lastplayed&gt;20200213T033825&lt;&#x2F;lastplayed&gt; #上一次玩本游戏的时间，自动记录</span><br><span class="line">		&lt;gametime&gt;827&lt;&#x2F;gametime&gt; #游戏时间，自动记录</span><br><span class="line">	&lt;&#x2F;game&gt;</span><br><span class="line">&lt;&#x2F;gameList&gt;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Emuelec纯净版使用方法（三）</title>
-    <url>/2020/07/07/Emuelec3/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
-<p>首先放几张图给大家看看：</p>
-<span id="more"></span>
-
-<p><img src="Emuelec3/gba.jpg" alt="示例图片2"></p>
-<p><img src="Emuelec3/nes.jpg" alt="示例图片3"></p>
-<p><img src="Emuelec3/3.jpg" alt="示例图片4"></p>
-<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
-<p><img src="Emuelec3/%E4%B8%BB%E9%A2%98.png" alt="示例图片5"></p>
-<p><img src="Emuelec3/sz.jpg" alt="示例图片6"></p>
 ]]></content>
       <categories>
         <category>Emuelec</category>
@@ -321,6 +321,18 @@
       </categories>
   </entry>
   <entry>
+    <title>影视资源站-站长必备</title>
+    <url>/2020/12/19/ziyuan/</url>
+    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
+
+<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
+<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
+      </categories>
+  </entry>
+  <entry>
     <title>使用ffmpeg推流直播的正确姿势</title>
     <url>/2020/06/04/ffmpeg/</url>
     <content><![CDATA[<p>前面写的<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/">Armbian教程（二）</a>简单说明了利用ffmpeg推流到<a href="https://www.bilibili.com/">哔哩哔哩</a>进行直播的方法，但是对于如何实现列表顺序播放和推流命令的意思没有详细的说明，这篇教程来进行讲解。<br>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a><br><img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png"></p>
@@ -373,18 +385,6 @@
 ]]></content>
       <categories>
         <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>影视资源站-站长必备</title>
-    <url>/2020/12/19/ziyuan/</url>
-    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
-
-<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
-<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
