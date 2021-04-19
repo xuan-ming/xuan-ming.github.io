@@ -145,40 +145,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Emuelec纯净版使用方法（二）</title>
-    <url>/2020/07/05/Emuelec2/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="一、更改Emuelec时区"><a href="#一、更改Emuelec时区" class="headerlink" title="一、更改Emuelec时区"></a>一、更改Emuelec时区</h1><p>因为Emuelec的作者是墨西哥人，所以Emuelec的默认时区为墨西哥。要修改时区为中国，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后打开/emuelec/configs/emuelec.conf  ，找到timezone然后改成：</p>
-<span id="more"></span>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">system.timezone&#x3D;Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure>
-
-<p>保存并退出，然后重启Emuelec，时区就改好了。</p>
-<p>Emuelec默认的账号和密码为：root，emuelec。</p>
-<p><img src="Emuelec2/winscp.png" alt="示例图片1"></p>
-<p><img src="Emuelec2/winscp2.png" alt="示例图片2"></p>
-<p><img src="Emuelec2/winscp3.png" alt="示例图片3"></p>
-<h1 id="二、汉化RA"><a href="#二、汉化RA" class="headerlink" title="二、汉化RA"></a>二、汉化RA</h1><p>Emuelec前端自带官方汉化，但是RA界面因为自带的字体有问题，如果选择中文简体的话，字体会变成乱码；</p>
-<p>1、首先下载字体<a href="https://pan.baidu.com/s/19qfuDoRjT4Vfvu3rA9Bxmg">提取码：dl55</a>，然后用winscp登录Emuelec，打开/storage/assets/ozone文件夹，用下载好的字体文件替换掉原来的，然后重启Emuelec。</p>
-<p><img src="Emuelec2/RA.png" alt="示例图片4"></p>
-<p>2、进入RA，设置（Settings）—用户（User）—语言（Language)—简体中文；界面—开启显示高级设置；菜单—配置文件—保存当前配置。RA汉化完成。1-2适用于Emuelec3.5及之前的版本，如果你的Emuelec版本是3.6，请往下看！</p>
-<p><img src="Emuelec2/RA2.jpg" alt="示例图片5"></p>
-<p><img src="Emuelec2/RA3.jpg" alt="示例图片6"></p>
-<p><img src="Emuelec2/RA4.jpg" alt="示例图片7"></p>
-<p><img src="Emuelec2/RA5.jpg" alt="示例图片8"></p>
-<p><img src="Emuelec2/RA6.jpg" alt="示例图片9"></p>
-<p>3、Emuelec3.6使用1-2的教程替换文件之后，还是会乱码，这时候需要再进行一步操作才能完成汉化，下载<a href="https://pan.baidu.com/s/18pjKCBnlZZxtHjBDpwjr6g">提取码：c17n</a>之后，把它解压到assets文件夹里面然后重启Emuelec，就完成汉化了。</p>
-<p><img src="Emuelec2/pkg.jpg" alt="示例图片10"></p>
-<p>教程3由群友回忆（879430967）和寒雪使者（1129612217）提供。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://www.cnblogs.com/milton/p/11971119.html">EmuELEC笔记</a></p>
-]]></content>
-      <categories>
-        <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Emuelec纯净版使用方法（一）</title>
     <url>/2020/07/01/Emuelec/</url>
     <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
@@ -230,6 +196,40 @@
       </categories>
   </entry>
   <entry>
+    <title>Emuelec纯净版使用方法（二）</title>
+    <url>/2020/07/05/Emuelec2/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="一、更改Emuelec时区"><a href="#一、更改Emuelec时区" class="headerlink" title="一、更改Emuelec时区"></a>一、更改Emuelec时区</h1><p>因为Emuelec的作者是墨西哥人，所以Emuelec的默认时区为墨西哥。要修改时区为中国，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后打开/emuelec/configs/emuelec.conf  ，找到timezone然后改成：</p>
+<span id="more"></span>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">system.timezone&#x3D;Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure>
+
+<p>保存并退出，然后重启Emuelec，时区就改好了。</p>
+<p>Emuelec默认的账号和密码为：root，emuelec。</p>
+<p><img src="Emuelec2/winscp.png" alt="示例图片1"></p>
+<p><img src="Emuelec2/winscp2.png" alt="示例图片2"></p>
+<p><img src="Emuelec2/winscp3.png" alt="示例图片3"></p>
+<h1 id="二、汉化RA"><a href="#二、汉化RA" class="headerlink" title="二、汉化RA"></a>二、汉化RA</h1><p>Emuelec前端自带官方汉化，但是RA界面因为自带的字体有问题，如果选择中文简体的话，字体会变成乱码；</p>
+<p>1、首先下载字体<a href="https://pan.baidu.com/s/19qfuDoRjT4Vfvu3rA9Bxmg">提取码：dl55</a>，然后用winscp登录Emuelec，打开/storage/assets/ozone文件夹，用下载好的字体文件替换掉原来的，然后重启Emuelec。</p>
+<p><img src="Emuelec2/RA.png" alt="示例图片4"></p>
+<p>2、进入RA，设置（Settings）—用户（User）—语言（Language)—简体中文；界面—开启显示高级设置；菜单—配置文件—保存当前配置。RA汉化完成。1-2适用于Emuelec3.5及之前的版本，如果你的Emuelec版本是3.6，请往下看！</p>
+<p><img src="Emuelec2/RA2.jpg" alt="示例图片5"></p>
+<p><img src="Emuelec2/RA3.jpg" alt="示例图片6"></p>
+<p><img src="Emuelec2/RA4.jpg" alt="示例图片7"></p>
+<p><img src="Emuelec2/RA5.jpg" alt="示例图片8"></p>
+<p><img src="Emuelec2/RA6.jpg" alt="示例图片9"></p>
+<p>3、Emuelec3.6使用1-2的教程替换文件之后，还是会乱码，这时候需要再进行一步操作才能完成汉化，下载<a href="https://pan.baidu.com/s/18pjKCBnlZZxtHjBDpwjr6g">提取码：c17n</a>之后，把它解压到assets文件夹里面然后重启Emuelec，就完成汉化了。</p>
+<p><img src="Emuelec2/pkg.jpg" alt="示例图片10"></p>
+<p>教程3由群友回忆（879430967）和寒雪使者（1129612217）提供。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://www.cnblogs.com/milton/p/11971119.html">EmuELEC笔记</a></p>
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Emuelec纯净版使用方法（三）</title>
     <url>/2020/07/07/Emuelec3/</url>
     <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
@@ -269,40 +269,6 @@
 ]]></content>
       <categories>
         <category>Emuelec</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>苹果CMSV10-设置自动采集</title>
-    <url>/2020/12/19/maccms/</url>
-    <content><![CDATA[<h2 id="一、登录网站后台"><a href="#一、登录网站后台" class="headerlink" title="一、登录网站后台"></a>一、登录网站后台</h2><p>点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
-<img src="https://i.loli.net/2021/04/18/wvuQPjTgCUohSHq.png" >
-
-<span id="more"></span>
-
-<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
-<img src="https://i.loli.net/2021/04/18/oZ5RCcO79xJXqfn.png" >
-
-
-
-<p>点击启用</p>
-<img src="https://i.loli.net/2021/04/18/PJju1B36SD59V7o.png" >
-
-
-
-<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
-<img src="https://i.loli.net/2021/04/18/sUGzFaBvxqig8Kw.png" >
-
-<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
-<p>任务类型：访问URL</p>
-<p>任务名称：随便填</p>
-<p>执行周期：每天具体时间自己选择</p>
-<p>URL地址：把刚刚复制的地址粘贴到这里</p>
-<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
-<p><img src="https://i.loli.net/2021/04/18/Z8ftDug74OdxXqm.png" ><img src="https://i.loli.net/2021/04/18/esQHnmjfPqF9JGb.png" ></p>
-<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -352,55 +318,6 @@
 ]]></content>
       <categories>
         <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>博客日志</title>
-    <url>/2020/07/08/%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>2021年4月19日：修改了404页面，换成404公益页面</p>
-<p>2021年4月18日：修改了友链样式</p>
-<p>2021年4月18日：评论邮件提醒挂了（没钱修复）</p>
-<p>2021年4月18日：添加了浏览器搞怪标题栏</p>
-<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/ziyuan/">影视资源站-站长必备</a></p>
-<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/maccms/">苹果CMSV10-设置自动采集</a></p>
-<p>2020年12月19日：删除了博客标签侧边栏</p>
-<p>2020年8月07日：添加了<a href="https://xuan-ming.github.io/friends/">友链</a>侧边栏</p>
-<p>2020年8月06日：添加了文章置顶插件</p>
-<span id="more"></span>
-
-<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/Emuelec4/">Emuelec纯净版使用方法（四）</a></p>
-<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">Armbian（三）</a></p>
-<p>2020年7月11日：添加了评论邮件提醒功能（评论时请务必填写昵称和邮箱）</p>
-<p>2020年7月08日：修复了博客搜素功能</p>
-<p>2020年7月08日：添加了更新日志</p>
-<p>2020年7月07日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/07/Emuelec3/">Emuelec纯净版使用方法（三）</a></p>
-<p>2020年7月05日：添加了博客已运行时间</p>
-<p>2020年7月05日：添加了点击特效</p>
-<p>2020年7月05日：添加了评论功能</p>
-<p>2020年7月05日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/05/Emuelec2/">Emuelec纯净版使用方法（二）</a></p>
-<p>2020年7月01日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/01/Emuelec/">Emuelec纯净版使用方法（一）</a></p>
-<p>2020年6月23日：添加了文章：<a href="https://xuan-ming.github.io/2020/06/23/%E7%99%BD%E5%AB%96/">白嫖各大平台VIP内容</a></p>
-<p>2020年6月08日：添加了live2d模型，优化了原有教程排版</p>
-<p>2020年6月04日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/04/ffmpeg/">使用ffmpeg推流直播的正确姿势</a></p>
-<p>2020年6月04日：更换了主题图片</p>
-<p>2020年6月03日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">Armbian（一）</a>、<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian（二）</a></p>
-<p>2020年6月03日：更换主题为<a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a></p>
-<p>2020年6月03日：创建了<a href="https://xuan-ming.github.io/">博客</a></p>
-]]></content>
-      <categories>
-        <category>博客日志</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>影视资源站-站长必备</title>
-    <url>/2020/12/19/ziyuan/</url>
-    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
-
-<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
-<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -456,6 +373,89 @@
 ]]></content>
       <categories>
         <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>苹果CMSV10-设置自动采集</title>
+    <url>/2020/12/19/maccms/</url>
+    <content><![CDATA[<h2 id="一、登录网站后台"><a href="#一、登录网站后台" class="headerlink" title="一、登录网站后台"></a>一、登录网站后台</h2><p>点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
+<img src="https://i.loli.net/2021/04/18/wvuQPjTgCUohSHq.png" >
+
+<span id="more"></span>
+
+<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
+<img src="https://i.loli.net/2021/04/18/oZ5RCcO79xJXqfn.png" >
+
+
+
+<p>点击启用</p>
+<img src="https://i.loli.net/2021/04/18/PJju1B36SD59V7o.png" >
+
+
+
+<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
+<img src="https://i.loli.net/2021/04/18/sUGzFaBvxqig8Kw.png" >
+
+<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
+<p>任务类型：访问URL</p>
+<p>任务名称：随便填</p>
+<p>执行周期：每天具体时间自己选择</p>
+<p>URL地址：把刚刚复制的地址粘贴到这里</p>
+<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
+<p><img src="https://i.loli.net/2021/04/18/Z8ftDug74OdxXqm.png" ><img src="https://i.loli.net/2021/04/18/esQHnmjfPqF9JGb.png" ></p>
+<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>影视资源站-站长必备</title>
+    <url>/2020/12/19/ziyuan/</url>
+    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
+
+<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
+<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>博客日志</title>
+    <url>/2020/07/08/%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<p>2021年4月19日：修改了404页面，换成404公益页面</p>
+<p>2021年4月18日：修改了友链样式</p>
+<p>2021年4月18日：评论邮件提醒挂了（没钱修复）</p>
+<p>2021年4月18日：添加了浏览器搞怪标题栏</p>
+<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/ziyuan/">影视资源站-站长必备</a></p>
+<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/maccms/">苹果CMSV10-设置自动采集</a></p>
+<p>2020年12月19日：删除了博客标签侧边栏</p>
+<p>2020年8月07日：添加了<a href="https://xuan-ming.github.io/friends/">友链</a>侧边栏</p>
+<p>2020年8月06日：添加了文章置顶插件</p>
+<span id="more"></span>
+
+<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/Emuelec4/">Emuelec纯净版使用方法（四）</a></p>
+<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">Armbian（三）</a></p>
+<p>2020年7月11日：添加了评论邮件提醒功能（评论时请务必填写昵称和邮箱）</p>
+<p>2020年7月08日：修复了博客搜素功能</p>
+<p>2020年7月08日：添加了更新日志</p>
+<p>2020年7月07日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/07/Emuelec3/">Emuelec纯净版使用方法（三）</a></p>
+<p>2020年7月05日：添加了博客已运行时间</p>
+<p>2020年7月05日：添加了点击特效</p>
+<p>2020年7月05日：添加了评论功能</p>
+<p>2020年7月05日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/05/Emuelec2/">Emuelec纯净版使用方法（二）</a></p>
+<p>2020年7月01日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/01/Emuelec/">Emuelec纯净版使用方法（一）</a></p>
+<p>2020年6月23日：添加了文章：<a href="https://xuan-ming.github.io/2020/06/23/%E7%99%BD%E5%AB%96/">白嫖各大平台VIP内容</a></p>
+<p>2020年6月08日：添加了live2d模型，优化了原有教程排版</p>
+<p>2020年6月04日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/04/ffmpeg/">使用ffmpeg推流直播的正确姿势</a></p>
+<p>2020年6月04日：更换了主题图片</p>
+<p>2020年6月03日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">Armbian（一）</a>、<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian（二）</a></p>
+<p>2020年6月03日：更换主题为<a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a></p>
+<p>2020年6月03日：创建了<a href="https://xuan-ming.github.io/">博客</a></p>
+]]></content>
+      <categories>
+        <category>博客日志</category>
       </categories>
   </entry>
   <entry>
