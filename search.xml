@@ -327,40 +327,6 @@
       </categories>
   </entry>
   <entry>
-    <title>苹果CMSV10-设置自动采集</title>
-    <url>/2020/12/19/maccms/</url>
-    <content><![CDATA[<h2 id="一、登录网站后台"><a href="#一、登录网站后台" class="headerlink" title="一、登录网站后台"></a>一、登录网站后台</h2><p>点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
-<img src="https://i.loli.net/2021/04/18/wvuQPjTgCUohSHq.png" >
-
-<span id="more"></span>
-
-<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
-<img src="https://i.loli.net/2021/04/18/oZ5RCcO79xJXqfn.png" >
-
-
-
-<p>点击启用</p>
-<img src="https://i.loli.net/2021/04/18/PJju1B36SD59V7o.png" >
-
-
-
-<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
-<img src="https://i.loli.net/2021/04/18/sUGzFaBvxqig8Kw.png" >
-
-<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
-<p>任务类型：访问URL</p>
-<p>任务名称：随便填</p>
-<p>执行周期：每天具体时间自己选择</p>
-<p>URL地址：把刚刚复制的地址粘贴到这里</p>
-<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
-<p><img src="https://i.loli.net/2021/04/18/Z8ftDug74OdxXqm.png" ><img src="https://i.loli.net/2021/04/18/esQHnmjfPqF9JGb.png" ></p>
-<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Armbian系列教程-解决安装某些程序卡死问题</title>
     <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
     <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
@@ -410,28 +376,49 @@
       </categories>
   </entry>
   <entry>
-    <title>白嫖各大平台VIP内容</title>
-    <url>/2020/06/23/%E7%99%BD%E5%AB%96/</url>
-    <content><![CDATA[<h1 id="一、各大视频网站"><a href="#一、各大视频网站" class="headerlink" title="一、各大视频网站"></a>一、各大视频网站</h1><p>现在越来越多的内容开始收费下载或者需要会员才能观看，但是一些网站就算买了会员，体验也一样很差，所以今天教大家一个不需要VIP也能观看和下载vip内容的方法。因为是网页所以不管是电脑还是移动设备教程都是通用的！</p>
-<p>该教程仅供技术交流使用！请勿恶意使用！</p>
-<p>多图预警！！！</p>
-<span id="more"></span>
+    <title>影视资源站-站长必备</title>
+    <url>/2020/12/19/ziyuan/</url>
+    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
 
-<h3 id="TX视频"><a href="#TX视频" class="headerlink" title="TX视频"></a>TX视频</h3><p>首先以TX视频为例，打开网页版的TX视频，找到你想看的电影或者电视剧，在网址https://后面加上wn.run/,然后回车就看到进入一个新的网页了，在这个网页随便选择一个工具开始解析，解析完就能观看VIP视频了。这个代码使用范围请自行摸索，需要VIP的网站就可以试一试。</p>
-<p><img src="%E7%99%BD%E5%AB%96/tx.jpg" alt="示例图片1"></p>
-<p><img src="%E7%99%BD%E5%AB%96/tx-js.jpg" alt="示例图片2"></p>
-<p><img src="%E7%99%BD%E5%AB%96/tx-wn.jpg" alt="示例图片3"></p>
-<p><img src="%E7%99%BD%E5%AB%96/tx-jx.jpg" alt="示例图片4"></p>
-<h3 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h3><p>哔哩哔哩（bilibili）简称“b站”，b站上有很多优秀的视频，但是很多视频不提供下载，所以教大家一个方法，下载b站上的视频。具体方法和上面是一样的。</p>
-<p><img src="%E7%99%BD%E5%AB%96/b-js.jpg" alt="示例图片5"></p>
-<p><img src="%E7%99%BD%E5%AB%96/b-wn.jpg" alt="示例图片6"></p>
-<h3 id="百度文库"><a href="#百度文库" class="headerlink" title="百度文库"></a>百度文库</h3><p>百度文库就不介绍了，首先找到你要下载的文档，然后在baidu后面加上vvv，回车就行了。具体看图！</p>
-<p><img src="%E7%99%BD%E5%AB%96/bdwk.jpg" alt="示例图片7"></p>
-<p><img src="%E7%99%BD%E5%AB%96/bd-js.jpg" alt="示例图片8"></p>
-<p><img src="%E7%99%BD%E5%AB%96/bd-vvv.jpg" alt="示例图片9"></p>
+<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
+<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
 ]]></content>
       <categories>
-        <category>杂七杂八</category>
+        <category>苹果CMS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>苹果CMSV10-设置自动采集</title>
+    <url>/2020/12/19/maccms/</url>
+    <content><![CDATA[<h2 id="一、登录网站后台"><a href="#一、登录网站后台" class="headerlink" title="一、登录网站后台"></a>一、登录网站后台</h2><p>点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
+<img src="https://i.loli.net/2021/04/18/wvuQPjTgCUohSHq.png" >
+
+<span id="more"></span>
+
+<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
+<img src="https://i.loli.net/2021/04/18/oZ5RCcO79xJXqfn.png" >
+
+
+
+<p>点击启用</p>
+<img src="https://i.loli.net/2021/04/18/PJju1B36SD59V7o.png" >
+
+
+
+<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
+<img src="https://i.loli.net/2021/04/18/sUGzFaBvxqig8Kw.png" >
+
+<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
+<p>任务类型：访问URL</p>
+<p>任务名称：随便填</p>
+<p>执行周期：每天具体时间自己选择</p>
+<p>URL地址：把刚刚复制的地址粘贴到这里</p>
+<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
+<p><img src="https://i.loli.net/2021/04/18/Z8ftDug74OdxXqm.png" ><img src="https://i.loli.net/2021/04/18/esQHnmjfPqF9JGb.png" ></p>
+<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -471,15 +458,28 @@
       </categories>
   </entry>
   <entry>
-    <title>影视资源站-站长必备</title>
-    <url>/2020/12/19/ziyuan/</url>
-    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><h3 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h3><span id="more"></span>
+    <title>白嫖各大平台VIP内容</title>
+    <url>/2020/06/23/%E7%99%BD%E5%AB%96/</url>
+    <content><![CDATA[<h1 id="一、各大视频网站"><a href="#一、各大视频网站" class="headerlink" title="一、各大视频网站"></a>一、各大视频网站</h1><p>现在越来越多的内容开始收费下载或者需要会员才能观看，但是一些网站就算买了会员，体验也一样很差，所以今天教大家一个不需要VIP也能观看和下载vip内容的方法。因为是网页所以不管是电脑还是移动设备教程都是通用的！</p>
+<p>该教程仅供技术交流使用！请勿恶意使用！</p>
+<p>多图预警！！！</p>
+<span id="more"></span>
 
-<p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a><br>麻花资源站： <a href="http://mahuazy.net/">http://mahuazy.net/</a><br>123资源站： <a href="http://123ku.com/">http://123ku.com/</a></p>
-<h3 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h3><p>最新资源站： <a href="http://www.zuixinzy.net/">http://www.zuixinzy.net/</a><br>酷云资源站： <a href="http://kuyunzy1.com/">http://kuyunzy1.com/</a><br>ok资源站： <a href="https://www.okzy.co/?m=vod-type-id-22.html">https://www.okzy.co/?m=vod-type-id-22.html</a></p>
+<h3 id="TX视频"><a href="#TX视频" class="headerlink" title="TX视频"></a>TX视频</h3><p>首先以TX视频为例，打开网页版的TX视频，找到你想看的电影或者电视剧，在网址https://后面加上wn.run/,然后回车就看到进入一个新的网页了，在这个网页随便选择一个工具开始解析，解析完就能观看VIP视频了。这个代码使用范围请自行摸索，需要VIP的网站就可以试一试。</p>
+<p><img src="%E7%99%BD%E5%AB%96/tx.jpg" alt="示例图片1"></p>
+<p><img src="%E7%99%BD%E5%AB%96/tx-js.jpg" alt="示例图片2"></p>
+<p><img src="%E7%99%BD%E5%AB%96/tx-wn.jpg" alt="示例图片3"></p>
+<p><img src="%E7%99%BD%E5%AB%96/tx-jx.jpg" alt="示例图片4"></p>
+<h3 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h3><p>哔哩哔哩（bilibili）简称“b站”，b站上有很多优秀的视频，但是很多视频不提供下载，所以教大家一个方法，下载b站上的视频。具体方法和上面是一样的。</p>
+<p><img src="%E7%99%BD%E5%AB%96/b-js.jpg" alt="示例图片5"></p>
+<p><img src="%E7%99%BD%E5%AB%96/b-wn.jpg" alt="示例图片6"></p>
+<h3 id="百度文库"><a href="#百度文库" class="headerlink" title="百度文库"></a>百度文库</h3><p>百度文库就不介绍了，首先找到你要下载的文档，然后在baidu后面加上vvv，回车就行了。具体看图！</p>
+<p><img src="%E7%99%BD%E5%AB%96/bdwk.jpg" alt="示例图片7"></p>
+<p><img src="%E7%99%BD%E5%AB%96/bd-js.jpg" alt="示例图片8"></p>
+<p><img src="%E7%99%BD%E5%AB%96/bd-vvv.jpg" alt="示例图片9"></p>
 ]]></content>
       <categories>
-        <category>苹果CMS</category>
+        <category>杂七杂八</category>
       </categories>
   </entry>
 </search>
