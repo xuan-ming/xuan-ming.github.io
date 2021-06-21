@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Armbian搭建视频网站-安装苹果CMS</title>
+    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/</url>
+    <content><![CDATA[<h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p>
+<span id="more"></span>
+
+<img src="https://pic.imgdb.cn/item/60c22617844ef46bb217e662.jpg">
+
+<h4 id="1-1、下载苹果CMS"><a href="#1-1、下载苹果CMS" class="headerlink" title="1.1、下载苹果CMS"></a>1.1、下载苹果CMS</h4><p>到这里面<a href="https://www.mytheme.cn/article/189.html">点这里</a>，下载最新的苹果CMSV10版本，不要下错了。</p>
+<h3 id="二、安装苹果CMS"><a href="#二、安装苹果CMS" class="headerlink" title="二、安装苹果CMS"></a>二、安装苹果CMS</h3><p>安装苹果CMS有两个方法，一个是宝塔面板的一键部署，可以一键部署苹果CMS，但是我没用过，所以主要介绍第二种方法。</p>
+<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把刚刚下载的苹果CMSV10文件，上传到目录下，上传完之后解压到当前目录下。</p>
+<img src="https://pic.imgdb.cn/item/60c2291f844ef46bb256e630.jpg">
+
+<img src="https://pic.imgdb.cn/item/60c2294b844ef46bb25a8348.jpg">
+
+<p>解压之后，在浏览器中输入设备的IP地址/admin.php，进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，在浏览器里输入你的IP地址就能看到网址首页了。</p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Armbian搭建视频网站-安装宝塔面板</title>
     <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/</url>
     <content><![CDATA[<h3 id="一、安装宝塔面板"><a href="#一、安装宝塔面板" class="headerlink" title="一、安装宝塔面板"></a>一、安装宝塔面板</h3><p>首先按照我之前写的教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian，按照教程设置完之后，打开终端输入下面的命令：</p>
@@ -26,17 +47,47 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian搭建视频网址-更换网站模板和采集</title>
-    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/</url>
-    <content><![CDATA[<h3 id="一、网站美化"><a href="#一、网站美化" class="headerlink" title="一、网站美化"></a>一、网站美化</h3><p>苹果CMS自带的模板有点欣赏不来，于是在网上找到一个免费模板自己改了改，凑合着用。模板下载<a href="https://www.mytheme.cn/mulu1/maccmsv10">点这里</a>。</p>
+    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
+    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
+    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
 <span id="more"></span>
 
-<img src="https://pic.imgdb.cn/item/60c22d1d844ef46bb2ab9cfe.jpg">
+<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
 
-<p>首先登录宝塔面板，把你找到的模板上传到template文件夹里解压好，弄好之后，登录苹果CMS后台，点击系统，点击网址参数配置，然后把网站模板改成你刚刚上传的模板文件，模板目录按你上传的模板为准（自己找），自适应手机点击单域，其他的自己看需求填好，弄好之后点击保存。然后访问网站首页就会发现变成你找到模板样式了，但是因为你还没有采集视频数据，所以很多东西没有显示。</p>
-<h3 id="二、采集设置"><a href="#二、采集设置" class="headerlink" title="二、采集设置"></a>二、采集设置</h3><p>因为最近严打很多老牌资源站都倒闭了，请自行上网查找资源站，也可以看看我这篇博客<a href="https://xuan-ming.github.io/2021/05/09/ziyuan/">点这里</a>，如果这些资源站还能用的话。</p>
-<p>资源站的帮助中心都有相应的采集教程，这里就不多说了，自行查看各个资源站的采集教程。</p>
-<p>采集到一定量的数据网站首页才会显示相应的分类，所以快点去掏空资源站吧。</p>
+<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
+
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
+这样就把多个mp3文件合并成为一个mp3文件了。
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
+
+<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
+
+<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<p>#单文件循环推流</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
+
+<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
+<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
+<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
+<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
+<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
+<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
 ]]></content>
       <categories>
         <category>Armbian</category>
@@ -140,123 +191,20 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian搭建视频网站-安装苹果CMS</title>
-    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/</url>
-    <content><![CDATA[<h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p>
+    <title>Armbian搭建视频网址-更换网站模板和采集</title>
+    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/</url>
+    <content><![CDATA[<h3 id="一、网站美化"><a href="#一、网站美化" class="headerlink" title="一、网站美化"></a>一、网站美化</h3><p>苹果CMS自带的模板有点欣赏不来，于是在网上找到一个免费模板自己改了改，凑合着用。模板下载<a href="https://www.mytheme.cn/mulu1/maccmsv10">点这里</a>。</p>
 <span id="more"></span>
 
-<img src="https://pic.imgdb.cn/item/60c22617844ef46bb217e662.jpg">
+<img src="https://pic.imgdb.cn/item/60c22d1d844ef46bb2ab9cfe.jpg">
 
-<h4 id="1-1、下载苹果CMS"><a href="#1-1、下载苹果CMS" class="headerlink" title="1.1、下载苹果CMS"></a>1.1、下载苹果CMS</h4><p>到这里面<a href="https://www.mytheme.cn/article/189.html">点这里</a>，下载最新的苹果CMSV10版本，不要下错了。</p>
-<h3 id="二、安装苹果CMS"><a href="#二、安装苹果CMS" class="headerlink" title="二、安装苹果CMS"></a>二、安装苹果CMS</h3><p>安装苹果CMS有两个方法，一个是宝塔面板的一键部署，可以一键部署苹果CMS，但是我没用过，所以主要介绍第二种方法。</p>
-<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把刚刚下载的苹果CMSV10文件，上传到目录下，上传完之后解压到当前目录下。</p>
-<img src="https://pic.imgdb.cn/item/60c2291f844ef46bb256e630.jpg">
-
-<img src="https://pic.imgdb.cn/item/60c2294b844ef46bb25a8348.jpg">
-
-<p>解压之后，在浏览器中输入设备的IP地址/admin.php，进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，在浏览器里输入你的IP地址就能看到网址首页了。</p>
+<p>首先登录宝塔面板，把你找到的模板上传到template文件夹里解压好，弄好之后，登录苹果CMS后台，点击系统，点击网址参数配置，然后把网站模板改成你刚刚上传的模板文件，模板目录按你上传的模板为准（自己找），自适应手机点击单域，其他的自己看需求填好，弄好之后点击保存。然后访问网站首页就会发现变成你找到模板样式了，但是因为你还没有采集视频数据，所以很多东西没有显示。</p>
+<h3 id="二、采集设置"><a href="#二、采集设置" class="headerlink" title="二、采集设置"></a>二、采集设置</h3><p>因为最近严打很多老牌资源站都倒闭了，请自行上网查找资源站，也可以看看我这篇博客<a href="https://xuan-ming.github.io/2021/05/09/ziyuan/">点这里</a>，如果这些资源站还能用的话。</p>
+<p>资源站的帮助中心都有相应的采集教程，这里就不多说了，自行查看各个资源站的采集教程。</p>
+<p>采集到一定量的数据网站首页才会显示相应的分类，所以快点去掏空资源站吧。</p>
 ]]></content>
       <categories>
         <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
-    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
-    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
-<span id="more"></span>
-
-<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
-
-<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-
-<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
-
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
-这样就把多个mp3文件合并成为一个mp3文件了。
-
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
-
-<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
-
-<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<p>#单文件循环推流</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
-
-<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
-<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
-<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
-<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
-<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
-<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Emuelec纯净版使用方法（一）</title>
-    <url>/2020/07/01/Emuelec/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>本教程使用的版本为最新的Emuelec3.6，本教程适用于Emuelec，仅供爱好者们学习交流使用！禁止用作他用！</p>
-<p>使用前请查询设备是否支持emuelec系统，请查看<a href="https://github.com/EmuELEC/EmuELEC/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E---Chinese-guide">emuelec中文文档</a>！</p>
-<span id="more"></span>
-
-<p>准备需要的工具和文件，下载并安装</p>
-<p>1、Emuelec镜像：<a href="https://github.com/EmuELEC/EmuELEC/releases">官方纯净版</a></p>
-<p>2、rufus：<a href="https://pan.baidu.com/s/174uW6fn-_aBgptdr6BCpog">提取码：2293</a></p>
-<p>3、bios：<a href="https://pan.baidu.com/s/1rSmfPtNvUS-YGK5SkY6FpQ">提取码：zz7y</a></p>
-<p>4、notepad++：自行下载安装</p>
-<p>5、Reboor to LibreELEU:<a href="https://pan.baidu.com/s/1WUYGxGN9cwN5hEaPQve1jg">提取码：6p82</a></p>
-<p>6、SDFormatter：恢复内存卡空间 <a href="https://pan.baidu.com/s/1czWljlLUGlYEoX0fSe8n1Q">提取码：nw7c</a></p>
-<p>7、内存卡</p>
-<p>8、游戏手柄</p>
-<h1 id="二、刷入Emuelec系统"><a href="#二、刷入Emuelec系统" class="headerlink" title="二、刷入Emuelec系统"></a>二、刷入Emuelec系统</h1><p>打开rufus，设备：选择你要写入的对象，选择：选择前面下载好的镜像文件；点击开始，等待写入完成。</p>
-<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cddd.png">
-
-
-
-<p>在Emuelec分区的dtb文件夹里找到你设备的dtb文件，复制到根目录下改名为dtb.img，如有提示选择覆盖原文件即可！</p>
-<h1 id="三、初始化Emuelec"><a href="#三、初始化Emuelec" class="headerlink" title="三、初始化Emuelec"></a>三、初始化Emuelec</h1><p>插入内存卡和手柄开机，进入tv系统，安装Reboor to LibreELEU，运行Reboor to LibreELEU点击确定，会自动重启进入Emuelec系统，等待扩容完成，然后进行手柄按键映射，设置完之后就进入Emuelec系统了。</p>
-<img src="https://img.imgdb.cn/item/6080383ad829612bedac0815.png" >
-
-<img src="https://img.imgdb.cn/item/60803840d829612bedac3ed9.jpg" >
-
-
-
-<img src="https://img.imgdb.cn/item/6080383ad829612bedac0802.jpg" >
-
-<h1 id="四、替换和添加相关文件"><a href="#四、替换和添加相关文件" class="headerlink" title="四、替换和添加相关文件"></a>四、替换和添加相关文件</h1><h2 id="1、添加bios"><a href="#1、添加bios" class="headerlink" title="1、添加bios"></a>1、添加bios</h2><p>盒子接入网线或者启用wifi，使电脑和盒子处于同一局域网下，打开此电脑在路径那里输入\\192.168.1.***(此为你盒子上显示的ip地址)，进入如下界面。</p>
-<img src="https://img.imgdb.cn/item/60803840d829612bedac3edd.png" >
-
-<p>双击打开roms文件夹，找到bios文件夹，把前面下载好的bios文件解压之后，把里面的文件都复制进bios文件夹。然后重启emuelec系统这样就添加完毕了。</p>
-<h2 id="2、替换模拟核心"><a href="#2、替换模拟核心" class="headerlink" title="2、替换模拟核心"></a>2、替换模拟核心</h2><p>如果你需要替换模拟核心，在<a href="http://buildbot.libretro.com/nightly/linux/armhf/2020-07-01_cores/">这个网站</a>可以找到最新编译的核心，下载好你要替换掉的核心，然后把它复制到cores这个文件夹替换掉原来的核心就行。替换完之后记得重启emuelec系统。</p>
-<h2 id="3、添加模拟核心"><a href="#3、添加模拟核心" class="headerlink" title="3、添加模拟核心"></a>3、添加模拟核心</h2><p>添加新的模拟核心之后，想要在运行游戏时选择它，还需要编辑getcores.sh文件，在getcores.sh文件里添加这个核心才会显示在前端上，它的路径是\Emulationstation Config\scripts\，使用notepad++打开getcores.sh，在相对应的机种后面添加上模拟核心的名字，保存并退出。重启emuelec。</p>
-<img src="https://img.imgdb.cn/item/6080383ad829612bedac07eb.png" >
-
-<img src="https://img.imgdb.cn/item/6080383ad829612bedac07f8.png" >
-
-<h1 id="五、添加游戏"><a href="#五、添加游戏" class="headerlink" title="五、添加游戏"></a>五、添加游戏</h1><p>从网上下载的游戏要放进正确的文件夹里才能运行，好在emuelec系统已经提前建好了相关文件夹，在emuelec系统中游戏存放在roms文件夹里相对应的文件夹里，例如psp游戏放在roms\psp\文件夹里。重启emuelec之后游戏就会自动分类显示了。</p>
-<img src="https://img.imgdb.cn/item/6080383ad829612bedac080a.png" >
-
-<h1 id="六、开始游戏"><a href="#六、开始游戏" class="headerlink" title="六、开始游戏"></a>六、开始游戏</h1><p>通过上面的步骤之后，已经大概的设置好了emuelec，可以愉快的进行游戏了！</p>
-]]></content>
-      <categories>
-        <category>Emuelec</category>
       </categories>
   </entry>
   <entry>
@@ -333,6 +281,107 @@
       </categories>
   </entry>
   <entry>
+    <title>Emuelec纯净版使用方法（一）</title>
+    <url>/2020/07/01/Emuelec/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>本教程使用的版本为最新的Emuelec3.6，本教程适用于Emuelec，仅供爱好者们学习交流使用！禁止用作他用！</p>
+<p>使用前请查询设备是否支持emuelec系统，请查看<a href="https://github.com/EmuELEC/EmuELEC/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E---Chinese-guide">emuelec中文文档</a>！</p>
+<span id="more"></span>
+
+<p>准备需要的工具和文件，下载并安装</p>
+<p>1、Emuelec镜像：<a href="https://github.com/EmuELEC/EmuELEC/releases">官方纯净版</a></p>
+<p>2、rufus：<a href="https://pan.baidu.com/s/174uW6fn-_aBgptdr6BCpog">提取码：2293</a></p>
+<p>3、bios：<a href="https://pan.baidu.com/s/1rSmfPtNvUS-YGK5SkY6FpQ">提取码：zz7y</a></p>
+<p>4、notepad++：自行下载安装</p>
+<p>5、Reboor to LibreELEU:<a href="https://pan.baidu.com/s/1WUYGxGN9cwN5hEaPQve1jg">提取码：6p82</a></p>
+<p>6、SDFormatter：恢复内存卡空间 <a href="https://pan.baidu.com/s/1czWljlLUGlYEoX0fSe8n1Q">提取码：nw7c</a></p>
+<p>7、内存卡</p>
+<p>8、游戏手柄</p>
+<h1 id="二、刷入Emuelec系统"><a href="#二、刷入Emuelec系统" class="headerlink" title="二、刷入Emuelec系统"></a>二、刷入Emuelec系统</h1><p>打开rufus，设备：选择你要写入的对象，选择：选择前面下载好的镜像文件；点击开始，等待写入完成。</p>
+<img src="https://img.imgdb.cn/item/607b215a8322e6675cb5cddd.png">
+
+
+
+<p>在Emuelec分区的dtb文件夹里找到你设备的dtb文件，复制到根目录下改名为dtb.img，如有提示选择覆盖原文件即可！</p>
+<h1 id="三、初始化Emuelec"><a href="#三、初始化Emuelec" class="headerlink" title="三、初始化Emuelec"></a>三、初始化Emuelec</h1><p>插入内存卡和手柄开机，进入tv系统，安装Reboor to LibreELEU，运行Reboor to LibreELEU点击确定，会自动重启进入Emuelec系统，等待扩容完成，然后进行手柄按键映射，设置完之后就进入Emuelec系统了。</p>
+<img src="https://img.imgdb.cn/item/6080383ad829612bedac0815.png" >
+
+<img src="https://img.imgdb.cn/item/60803840d829612bedac3ed9.jpg" >
+
+
+
+<img src="https://img.imgdb.cn/item/6080383ad829612bedac0802.jpg" >
+
+<h1 id="四、替换和添加相关文件"><a href="#四、替换和添加相关文件" class="headerlink" title="四、替换和添加相关文件"></a>四、替换和添加相关文件</h1><h2 id="1、添加bios"><a href="#1、添加bios" class="headerlink" title="1、添加bios"></a>1、添加bios</h2><p>盒子接入网线或者启用wifi，使电脑和盒子处于同一局域网下，打开此电脑在路径那里输入\\192.168.1.***(此为你盒子上显示的ip地址)，进入如下界面。</p>
+<img src="https://img.imgdb.cn/item/60803840d829612bedac3edd.png" >
+
+<p>双击打开roms文件夹，找到bios文件夹，把前面下载好的bios文件解压之后，把里面的文件都复制进bios文件夹。然后重启emuelec系统这样就添加完毕了。</p>
+<h2 id="2、替换模拟核心"><a href="#2、替换模拟核心" class="headerlink" title="2、替换模拟核心"></a>2、替换模拟核心</h2><p>如果你需要替换模拟核心，在<a href="http://buildbot.libretro.com/nightly/linux/armhf/2020-07-01_cores/">这个网站</a>可以找到最新编译的核心，下载好你要替换掉的核心，然后把它复制到cores这个文件夹替换掉原来的核心就行。替换完之后记得重启emuelec系统。</p>
+<h2 id="3、添加模拟核心"><a href="#3、添加模拟核心" class="headerlink" title="3、添加模拟核心"></a>3、添加模拟核心</h2><p>添加新的模拟核心之后，想要在运行游戏时选择它，还需要编辑getcores.sh文件，在getcores.sh文件里添加这个核心才会显示在前端上，它的路径是\Emulationstation Config\scripts\，使用notepad++打开getcores.sh，在相对应的机种后面添加上模拟核心的名字，保存并退出。重启emuelec。</p>
+<img src="https://img.imgdb.cn/item/6080383ad829612bedac07eb.png" >
+
+<img src="https://img.imgdb.cn/item/6080383ad829612bedac07f8.png" >
+
+<h1 id="五、添加游戏"><a href="#五、添加游戏" class="headerlink" title="五、添加游戏"></a>五、添加游戏</h1><p>从网上下载的游戏要放进正确的文件夹里才能运行，好在emuelec系统已经提前建好了相关文件夹，在emuelec系统中游戏存放在roms文件夹里相对应的文件夹里，例如psp游戏放在roms\psp\文件夹里。重启emuelec之后游戏就会自动分类显示了。</p>
+<img src="https://img.imgdb.cn/item/6080383ad829612bedac080a.png" >
+
+<h1 id="六、开始游戏"><a href="#六、开始游戏" class="headerlink" title="六、开始游戏"></a>六、开始游戏</h1><p>通过上面的步骤之后，已经大概的设置好了emuelec，可以愉快的进行游戏了！</p>
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Armbian系列教程-解决安装某些程序卡死问题</title>
+    <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
+    <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
+<span id="more"></span>
+
+<h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先确保系统中有足够的空间来用做swap交换空间，然后执行下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir image</span><br><span class="line">sudo touch swap</span><br></pre></td></tr></table></figure>
+
+<p>关于新建image文件，也可以用winscp找到/opt/，在目录下面新建image文件夹，/opt/image，然后执行<code>sudo touch swap</code>就行了。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>添加交换文件并设置其大小为2G，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;image&#x2F;swap bs&#x3D;1024 count&#x3D;2048000</span><br></pre></td></tr></table></figure>
+
+<p>等待一会儿，会返回如下结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2048000+0 records in</span><br><span class="line">2048000+0 records out</span><br><span class="line">2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB&#x2F;s</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>创建（设置）交换空间，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkswap &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>检查现有的交换空间大小，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>启动新增加的2G的交换空间，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo swapon &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
+
+<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>确认新增加的2G交换空间已经生效，执行如下命令查看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
+
+<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效，执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
+
+<p>按<code>i</code>键进入插入模式，在最后添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;image&#x2F;swap    &#x2F;swap    swap    defaults 0 0</span><br></pre></td></tr></table></figure>
+
+<p>按<code>esc</code>键退出插入模式，按<code>Shift+z z</code> 就可以保存修改内容并退出。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://blog.csdn.net/lzh_86/article/details/79450793?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">linux下如何保存退出vim编辑器</a></p>
+<p><a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a></p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Emuelec纯净版使用方法（四）</title>
     <url>/2020/08/06/Emuelec4/</url>
     <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
@@ -352,6 +401,40 @@
 ]]></content>
       <categories>
         <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>苹果CMSV10-设置自动采集</title>
+    <url>/2020/12/19/maccms/</url>
+    <content><![CDATA[<h2 id="一、登录苹果CMS"><a href="#一、登录苹果CMS" class="headerlink" title="一、登录苹果CMS"></a>一、登录苹果CMS</h2><p>首先登录苹果CMS后台，点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
+<img src="https://img.imgdb.cn/item/608035edd829612bed9f3852.png" >
+
+<span id="more"></span>
+
+<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
+<img src="https://img.imgdb.cn/item/608035edd829612bed9f385e.png" >
+
+
+
+<p>点击启用</p>
+<img src="https://img.imgdb.cn/item/608035edd829612bed9f386e.png" >
+
+
+
+<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
+<img src="https://img.imgdb.cn/item/608035edd829612bed9f387b.png" >
+
+<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
+<p>任务类型：访问URL</p>
+<p>任务名称：随便填</p>
+<p>执行周期：每天具体时间自己选择</p>
+<p>URL地址：把刚刚复制的地址粘贴到这里</p>
+<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
+<p><img src="https://img.imgdb.cn/item/608035edd829612bed9f3899.png" ><img src="https://img.imgdb.cn/item/608035f8d829612bed9f7785.png" ></p>
+<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -410,145 +493,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian系列教程-解决安装某些程序卡死问题</title>
-    <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
-    <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
-<span id="more"></span>
-
-<h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先确保系统中有足够的空间来用做swap交换空间，然后执行下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkdir image</span><br><span class="line">sudo touch swap</span><br></pre></td></tr></table></figure>
-
-<p>关于新建image文件，也可以用winscp找到/opt/，在目录下面新建image文件夹，/opt/image，然后执行<code>sudo touch swap</code>就行了。</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>添加交换文件并设置其大小为2G，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;opt&#x2F;image&#x2F;swap bs&#x3D;1024 count&#x3D;2048000</span><br></pre></td></tr></table></figure>
-
-<p>等待一会儿，会返回如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2048000+0 records in</span><br><span class="line">2048000+0 records out</span><br><span class="line">2097152000 bytes (2.1 GB, 2.0 GiB) copied, 242.095 s, 8.7 MB&#x2F;s</span><br></pre></td></tr></table></figure>
-
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>创建（设置）交换空间，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mkswap &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
-
-<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>检查现有的交换空间大小，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
-
-<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>启动新增加的2G的交换空间，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo swapon &#x2F;opt&#x2F;image&#x2F;swap</span><br></pre></td></tr></table></figure>
-
-<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>确认新增加的2G交换空间已经生效，执行如下命令查看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grep SwapTotal  &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
-
-<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>修改/etc/fstab文件，使得新加的2G交换空间在系统重新启动后自动生效，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
-
-<p>按<code>i</code>键进入插入模式，在最后添加如下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;opt&#x2F;image&#x2F;swap    &#x2F;swap    swap    defaults 0 0</span><br></pre></td></tr></table></figure>
-
-<p>按<code>esc</code>键退出插入模式，按<code>Shift+z z</code> 就可以保存修改内容并退出。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://blog.csdn.net/lzh_86/article/details/79450793?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">linux下如何保存退出vim编辑器</a></p>
-<p><a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a></p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>苹果CMSV10-设置自动采集</title>
-    <url>/2020/12/19/maccms/</url>
-    <content><![CDATA[<h2 id="一、登录苹果CMS"><a href="#一、登录苹果CMS" class="headerlink" title="一、登录苹果CMS"></a>一、登录苹果CMS</h2><p>首先登录苹果CMS后台，点击采集-自定义资源，把鼠标移到每日采集的按钮上，单击右键-复制链接地址</p>
-<img src="https://img.imgdb.cn/item/608035edd829612bed9f3852.png" >
-
-<span id="more"></span>
-
-<p>然后点击系统-定时任务配置，点击添加，把复制的链接粘贴到附加参数，删除ac前面的部分，名称必须是英文，备注随便，然后全选，点击保存。</p>
-<img src="https://img.imgdb.cn/item/608035edd829612bed9f385e.png" >
-
-
-
-<p>点击启用</p>
-<img src="https://img.imgdb.cn/item/608035edd829612bed9f386e.png" >
-
-
-
-<p>把鼠标移到测试按钮上，单击右键-复制链接地址</p>
-<img src="https://img.imgdb.cn/item/608035edd829612bed9f387b.png" >
-
-<h2 id="二、登录宝塔面板"><a href="#二、登录宝塔面板" class="headerlink" title="二、登录宝塔面板"></a>二、登录宝塔面板</h2><p>点击计划任务</p>
-<p>任务类型：访问URL</p>
-<p>任务名称：随便填</p>
-<p>执行周期：每天具体时间自己选择</p>
-<p>URL地址：把刚刚复制的地址粘贴到这里</p>
-<p>然后点击添加任务，添加完成之后，点击一下执行，到网站后台刷新一下看看运行时间，显示了就说明OK了。</p>
-<p><img src="https://img.imgdb.cn/item/608035edd829612bed9f3899.png" ><img src="https://img.imgdb.cn/item/608035f8d829612bed9f7785.png" ></p>
-<p>教程到此结束，如果发现问题，请在评论区留言反馈。</p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>影视资源站-站长必备</title>
-    <url>/2021/05/09/ziyuan/</url>
-    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a> </p>
-<p>乐多资源站：<a href="http://www.leduozy.com/">http://www.leduozy.com/</a></p>
-<span id="more"></span>
-
-<p>1886资源：<a href="http://www.1886zy.net/">http://www.1886zy.net/</a></p>
-<p>百度云资源：<a href="http://help.apibdzy.com/#wlcome">http://help.apibdzy.com/#wlcome</a></p>
-<p>聚合采集站：<a href="http://www.juhezyw.com/">http://www.juhezyw.com/</a></p>
-<p>乐喵资源：<a href="http://98hyk.cn/">http://98hyk.cn/</a></p>
-<p>88电影资源网：<a href="http://www.88zy.net/">http://www.88zy.net/</a></p>
-<p>209资源网：<a href="http://www.209zy.net/">http://www.209zy.net/</a></p>
-]]></content>
-      <categories>
-        <category>苹果CMS</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>博客日志</title>
-    <url>/2020/07/08/%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>2021年4月23日：更新了文章：<a href="https://xuan-ming.github.io/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">影视网站推荐</a></p>
-<p>2021年4月19日：修改了404页面，换成404公益页面</p>
-<p>2021年4月18日：修改了友链样式</p>
-<p>2021年4月18日：评论邮件提醒挂了（没钱修复）</p>
-<p>2021年4月18日：添加了浏览器搞怪标题栏</p>
-<span id="more"></span>
-
-<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/ziyuan/">影视资源站-站长必备</a></p>
-<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/maccms/">苹果CMSV10-设置自动采集</a></p>
-<p>2020年12月19日：删除了博客标签侧边栏</p>
-<p>2020年8月07日：添加了<a href="https://xuan-ming.github.io/friends/">友链</a>侧边栏</p>
-<p>2020年8月06日：添加了文章置顶插件</p>
-<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/Emuelec4/">Emuelec纯净版使用方法（四）</a></p>
-<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">Armbian（三）</a></p>
-<p>2020年7月11日：添加了评论邮件提醒功能（评论时请务必填写昵称和邮箱）</p>
-<p>2020年7月08日：修复了博客搜素功能</p>
-<p>2020年7月08日：添加了更新日志</p>
-<p>2020年7月07日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/07/Emuelec3/">Emuelec纯净版使用方法（三）</a></p>
-<p>2020年7月05日：添加了博客已运行时间</p>
-<p>2020年7月05日：添加了点击特效</p>
-<p>2020年7月05日：添加了评论功能</p>
-<p>2020年7月05日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/05/Emuelec2/">Emuelec纯净版使用方法（二）</a></p>
-<p>2020年7月01日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/01/Emuelec/">Emuelec纯净版使用方法（一）</a></p>
-<p>2020年6月23日：添加了文章：<a href="https://xuan-ming.github.io/2020/06/23/%E7%99%BD%E5%AB%96/">白嫖各大平台VIP内容</a></p>
-<p>2020年6月08日：添加了live2d模型，优化了原有教程排版</p>
-<p>2020年6月04日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/04/ffmpeg/">使用ffmpeg推流直播的正确姿势</a></p>
-<p>2020年6月04日：更换了主题图片</p>
-<p>2020年6月03日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">Armbian（一）</a>、<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian（二）</a></p>
-<p>2020年6月03日：更换主题为<a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a></p>
-<p>2020年6月03日：创建了<a href="https://xuan-ming.github.io/">博客</a></p>
-]]></content>
-      <categories>
-        <category>博客日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>白嫖各大平台VIP内容</title>
     <url>/2020/06/23/%E7%99%BD%E5%AB%96/</url>
     <content><![CDATA[<h1 id="一、各大视频网站"><a href="#一、各大视频网站" class="headerlink" title="一、各大视频网站"></a>一、各大视频网站</h1><p>现在越来越多的内容开始收费下载或者需要会员才能观看，但是一些网站就算买了会员，体验也一样很差，所以今天教大家一个不需要VIP也能观看和下载VIP内容的方法。因为是网页所以不管是电脑还是移动设备教程都是通用的！</p>
@@ -574,6 +518,24 @@
 <img src="https://img.imgdb.cn/item/60803514d829612bed9af3b8.png" >]]></content>
       <categories>
         <category>杂七杂八</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>影视资源站-站长必备</title>
+    <url>/2021/05/09/ziyuan/</url>
+    <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a> </p>
+<p>乐多资源站：<a href="http://www.leduozy.com/">http://www.leduozy.com/</a></p>
+<span id="more"></span>
+
+<p>1886资源：<a href="http://www.1886zy.net/">http://www.1886zy.net/</a></p>
+<p>百度云资源：<a href="http://help.apibdzy.com/#wlcome">http://help.apibdzy.com/#wlcome</a></p>
+<p>聚合采集站：<a href="http://www.juhezyw.com/">http://www.juhezyw.com/</a></p>
+<p>乐喵资源：<a href="http://98hyk.cn/">http://98hyk.cn/</a></p>
+<p>88电影资源网：<a href="http://www.88zy.net/">http://www.88zy.net/</a></p>
+<p>209资源网：<a href="http://www.209zy.net/">http://www.209zy.net/</a></p>
+]]></content>
+      <categories>
+        <category>苹果CMS</category>
       </categories>
   </entry>
   <entry>
@@ -613,6 +575,44 @@
 <img src="https://img.imgdb.cn/item/6081a939d1a9ae528f66dcba.png" >]]></content>
       <categories>
         <category>杂七杂八</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>博客日志</title>
+    <url>/2020/07/08/%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<p>2021年4月23日：更新了文章：<a href="https://xuan-ming.github.io/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">影视网站推荐</a></p>
+<p>2021年4月19日：修改了404页面，换成404公益页面</p>
+<p>2021年4月18日：修改了友链样式</p>
+<p>2021年4月18日：评论邮件提醒挂了（没钱修复）</p>
+<p>2021年4月18日：添加了浏览器搞怪标题栏</p>
+<span id="more"></span>
+
+<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/ziyuan/">影视资源站-站长必备</a></p>
+<p>2020年12月19日：更新了文章：<a href="https://xuan-ming.github.io/2020/12/19/maccms/">苹果CMSV10-设置自动采集</a></p>
+<p>2020年12月19日：删除了博客标签侧边栏</p>
+<p>2020年8月07日：添加了<a href="https://xuan-ming.github.io/friends/">友链</a>侧边栏</p>
+<p>2020年8月06日：添加了文章置顶插件</p>
+<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/Emuelec4/">Emuelec纯净版使用方法（四）</a></p>
+<p>2020年8月06日：更新了文章：<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">Armbian（三）</a></p>
+<p>2020年7月11日：添加了评论邮件提醒功能（评论时请务必填写昵称和邮箱）</p>
+<p>2020年7月08日：修复了博客搜素功能</p>
+<p>2020年7月08日：添加了更新日志</p>
+<p>2020年7月07日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/07/Emuelec3/">Emuelec纯净版使用方法（三）</a></p>
+<p>2020年7月05日：添加了博客已运行时间</p>
+<p>2020年7月05日：添加了点击特效</p>
+<p>2020年7月05日：添加了评论功能</p>
+<p>2020年7月05日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/05/Emuelec2/">Emuelec纯净版使用方法（二）</a></p>
+<p>2020年7月01日：更新了文章：<a href="https://xuan-ming.github.io/2020/07/01/Emuelec/">Emuelec纯净版使用方法（一）</a></p>
+<p>2020年6月23日：添加了文章：<a href="https://xuan-ming.github.io/2020/06/23/%E7%99%BD%E5%AB%96/">白嫖各大平台VIP内容</a></p>
+<p>2020年6月08日：添加了live2d模型，优化了原有教程排版</p>
+<p>2020年6月04日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/04/ffmpeg/">使用ffmpeg推流直播的正确姿势</a></p>
+<p>2020年6月04日：更换了主题图片</p>
+<p>2020年6月03日：更新了文章：<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">Armbian（一）</a>、<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian（二）</a></p>
+<p>2020年6月03日：更换主题为<a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a></p>
+<p>2020年6月03日：创建了<a href="https://xuan-ming.github.io/">博客</a></p>
+]]></content>
+      <categories>
+        <category>博客日志</category>
       </categories>
   </entry>
   <entry>
