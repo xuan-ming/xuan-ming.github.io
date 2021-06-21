@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Armbian搭建视频网站-安装苹果CMS</title>
-    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/</url>
-    <content><![CDATA[<h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p>
-<span id="more"></span>
-
-<img src="https://pic.imgdb.cn/item/60c22617844ef46bb217e662.jpg">
-
-<h4 id="1-1、下载苹果CMS"><a href="#1-1、下载苹果CMS" class="headerlink" title="1.1、下载苹果CMS"></a>1.1、下载苹果CMS</h4><p>到这里面<a href="https://www.mytheme.cn/article/189.html">点这里</a>，下载最新的苹果CMSV10版本，不要下错了。</p>
-<h3 id="二、安装苹果CMS"><a href="#二、安装苹果CMS" class="headerlink" title="二、安装苹果CMS"></a>二、安装苹果CMS</h3><p>安装苹果CMS有两个方法，一个是宝塔面板的一键部署，可以一键部署苹果CMS，但是我没用过，所以主要介绍第二种方法。</p>
-<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把刚刚下载的苹果CMSV10文件，上传到目录下，上传完之后解压到当前目录下。</p>
-<img src="https://pic.imgdb.cn/item/60c2291f844ef46bb256e630.jpg">
-
-<img src="https://pic.imgdb.cn/item/60c2294b844ef46bb25a8348.jpg">
-
-<p>解压之后，在浏览器中输入设备的IP地址/admin.php，进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，在浏览器里输入你的IP地址就能看到网址首页了。</p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Armbian搭建视频网站-安装宝塔面板</title>
     <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/</url>
     <content><![CDATA[<h3 id="一、安装宝塔面板"><a href="#一、安装宝塔面板" class="headerlink" title="一、安装宝塔面板"></a>一、安装宝塔面板</h3><p>首先按照我之前写的教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian，按照教程设置完之后，打开终端输入下面的命令：</p>
@@ -47,47 +26,38 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
-    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
-    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
+    <title>Armbian搭建视频网址-更换网站模板和采集</title>
+    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/</url>
+    <content><![CDATA[<h3 id="一、网站美化"><a href="#一、网站美化" class="headerlink" title="一、网站美化"></a>一、网站美化</h3><p>苹果CMS自带的模板有点欣赏不来，于是在网上找到一个免费模板自己改了改，凑合着用。模板下载<a href="https://www.mytheme.cn/mulu1/maccmsv10">点这里</a>。</p>
 <span id="more"></span>
 
-<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
+<img src="https://pic.imgdb.cn/item/60c22d1d844ef46bb2ab9cfe.jpg">
 
-<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
+<p>首先登录宝塔面板，把你找到的模板上传到template文件夹里解压好，弄好之后，登录苹果CMS后台，点击系统，点击网址参数配置，然后把网站模板改成你刚刚上传的模板文件，模板目录按你上传的模板为准（自己找），自适应手机点击单域，其他的自己看需求填好，弄好之后点击保存。然后访问网站首页就会发现变成你找到模板样式了，但是因为你还没有采集视频数据，所以很多东西没有显示。</p>
+<h3 id="二、采集设置"><a href="#二、采集设置" class="headerlink" title="二、采集设置"></a>二、采集设置</h3><p>因为最近严打很多老牌资源站都倒闭了，请自行上网查找资源站，也可以看看我这篇博客<a href="https://xuan-ming.github.io/2021/05/09/ziyuan/">点这里</a>，如果这些资源站还能用的话。</p>
+<p>资源站的帮助中心都有相应的采集教程，这里就不多说了，自行查看各个资源站的采集教程。</p>
+<p>采集到一定量的数据网站首页才会显示相应的分类，所以快点去掏空资源站吧。</p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Armbian搭建视频网站-安装苹果CMS</title>
+    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/</url>
+    <content><![CDATA[<h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p>
+<span id="more"></span>
 
-<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
+<img src="https://pic.imgdb.cn/item/60c22617844ef46bb217e662.jpg">
 
-<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+<h4 id="1-1、下载苹果CMS"><a href="#1-1、下载苹果CMS" class="headerlink" title="1.1、下载苹果CMS"></a>1.1、下载苹果CMS</h4><p>到这里面<a href="https://www.mytheme.cn/article/189.html">点这里</a>，下载最新的苹果CMSV10版本，不要下错了。</p>
+<h3 id="二、安装苹果CMS"><a href="#二、安装苹果CMS" class="headerlink" title="二、安装苹果CMS"></a>二、安装苹果CMS</h3><p>安装苹果CMS有两个方法，一个是宝塔面板的一键部署，可以一键部署苹果CMS，但是我没用过，所以主要介绍第二种方法。</p>
+<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把刚刚下载的苹果CMSV10文件，上传到目录下，上传完之后解压到当前目录下。</p>
+<img src="https://pic.imgdb.cn/item/60c2291f844ef46bb256e630.jpg">
 
-<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
+<img src="https://pic.imgdb.cn/item/60c2294b844ef46bb25a8348.jpg">
 
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
-这样就把多个mp3文件合并成为一个mp3文件了。
-
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
-
-<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
-<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
-
-<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<p>#单文件循环推流</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
-
-<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
-<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
-<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
-<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
-<p>本教程参考以下文章：</p>
-<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
-<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
-<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
+<p>解压之后，在浏览器中输入设备的IP地址/admin.php，进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，在浏览器里输入你的IP地址就能看到网址首页了。</p>
 ]]></content>
       <categories>
         <category>Armbian</category>
@@ -191,45 +161,50 @@
       </categories>
   </entry>
   <entry>
-    <title>Armbian搭建视频网址-更换网站模板和采集</title>
-    <url>/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/</url>
-    <content><![CDATA[<h3 id="一、网站美化"><a href="#一、网站美化" class="headerlink" title="一、网站美化"></a>一、网站美化</h3><p>苹果CMS自带的模板有点欣赏不来，于是在网上找到一个免费模板自己改了改，凑合着用。模板下载<a href="https://www.mytheme.cn/mulu1/maccmsv10">点这里</a>。</p>
+    <title>Armbian系列教程-搭建24h无人值守音乐台</title>
+    <url>/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/</url>
+    <content><![CDATA[<p>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a></p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png">
 <span id="more"></span>
 
-<img src="https://pic.imgdb.cn/item/60c22d1d844ef46bb2ab9cfe.jpg">
+<h1 id="一、更新软件列表和软件"><a href="#一、更新软件列表和软件" class="headerlink" title="一、更新软件列表和软件"></a>一、更新软件列表和软件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure>
 
-<p>首先登录宝塔面板，把你找到的模板上传到template文件夹里解压好，弄好之后，登录苹果CMS后台，点击系统，点击网址参数配置，然后把网站模板改成你刚刚上传的模板文件，模板目录按你上传的模板为准（自己找），自适应手机点击单域，其他的自己看需求填好，弄好之后点击保存。然后访问网站首页就会发现变成你找到模板样式了，但是因为你还没有采集视频数据，所以很多东西没有显示。</p>
-<h3 id="二、采集设置"><a href="#二、采集设置" class="headerlink" title="二、采集设置"></a>二、采集设置</h3><p>因为最近严打很多老牌资源站都倒闭了，请自行上网查找资源站，也可以看看我这篇博客<a href="https://xuan-ming.github.io/2021/05/09/ziyuan/">点这里</a>，如果这些资源站还能用的话。</p>
-<p>资源站的帮助中心都有相应的采集教程，这里就不多说了，自行查看各个资源站的采集教程。</p>
-<p>采集到一定量的数据网站首页才会显示相应的分类，所以快点去掏空资源站吧。</p>
+<h1 id="二、安装解码器"><a href="#二、安装解码器" class="headerlink" title="二、安装解码器"></a>二、安装解码器</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x264</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、安装ffmpeg"><a href="#三、安装ffmpeg" class="headerlink" title="三、安装ffmpeg"></a>三、安装ffmpeg</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ffmpeg</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、安装screen"><a href="#四、安装screen" class="headerlink" title="四、安装screen"></a>四、安装screen</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、准备直播的素材"><a href="#五、准备直播的素材" class="headerlink" title="五、准备直播的素材"></a>五、准备直播的素材</h1><p>1.直播电影电视的话，把下载好的素材用winscp传到设备里就行了；<br>2.如果是音乐的话，就需要前面安装的小丸工具箱了；</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全选你要播放的音乐文件，右键添加到压缩文件，然后文件扩展名改成.mp3，压缩文件格式选择rar，压缩方式选择储存，点击确定。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca0.png">
+
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86ca5.png">
+这样就把多个mp3文件合并成为一个mp3文件了。
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>打开小丸工具箱，点击常用，把刚刚弄好的音乐合集拖到音频那栏，图片那栏选一张自己喜欢的图片就行，右键刚刚做好的音乐合集，点击详细信息，然后把分钟换算秒数，得出的结果填入时间那栏，其他按照图上填就行，最后点击压制，等压制完成用winscp把压制好的视频传到设备上。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86caa.png">
+
+<h1 id="六、获取你的rtmp地址-你的直播码"><a href="#六、获取你的rtmp地址-你的直播码" class="headerlink" title="六、获取你的rtmp地址/你的直播码"></a>六、获取你的rtmp地址/你的直播码</h1><p>如果是在b站直播，点击头像，点击我的直播间，点击开播设置，然后选择分区，给直播间起一个名字，点击开播，复制你的rtmp地址/你的直播码。</p>
+<img src="https://img.imgdb.cn/item/607b23358322e6675cb86cb5.png">
+
+<h1 id="七、准备推流"><a href="#七、准备推流" class="headerlink" title="七、准备推流"></a>七、准备推流</h1><p>#screen创建ffmpeg会话</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<p>#单文件循环推流</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;file1.wav&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;直播码&quot;</span><br></pre></td></tr></table></figure>
+
+<p>#其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。</p>
+<p>#当回来时可以执行：screen -r ffmpeg”，即可恢复到离开前创建的ffmpeg会话的工作界面。</p>
+<p>#执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
+<p>#其中/path/to/为文件的路径，file1.wav为文件名和扩展名。</p>
+<p>本教程参考以下文章：</p>
+<p><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a></p>
+<p><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a></p>
+<p><a href="https://www.vpser.net/manage/screen.html">screen使用教程</a></p>
 ]]></content>
       <categories>
         <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Emuelec纯净版使用方法（三）</title>
-    <url>/2020/07/07/Emuelec3/</url>
-    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
-
-<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
-<p>首先放几张图给大家看看：</p>
-<span id="more"></span>
-
-<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d805.jpg">
-
-<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d822.jpg">
-
-<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d7e6.jpg">
-
-<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
-<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d869.png">
-
-<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d854.jpg">
-
-]]></content>
-      <categories>
-        <category>Emuelec</category>
       </categories>
   </entry>
   <entry>
@@ -333,6 +308,31 @@
       </categories>
   </entry>
   <entry>
+    <title>Emuelec纯净版使用方法（三）</title>
+    <url>/2020/07/07/Emuelec3/</url>
+    <content><![CDATA[<img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
+<p>首先放几张图给大家看看：</p>
+<span id="more"></span>
+
+<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d805.jpg">
+
+<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d822.jpg">
+
+<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d7e6.jpg">
+
+<p>更换主题很简单，下载<a href="https://pan.baidu.com/s/1G5g8i8BJwP-WFHqlO4dQtw">提取码：995v</a>之后，用winscp<a href="https://pan.baidu.com/s/1Clj00zp4YuBebtQYQD5xQA">提取码：8jpo</a>登录Emuelec，然后把它解压到/storage/.config/emulationstation/themes文件夹里，重启Emuelec之后，在UI设置里选择刚刚上传的主题就行了。</p>
+<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d869.png">
+
+<img src="https://img.imgdb.cn/item/60803a7dd829612bedb8d854.jpg">
+
+]]></content>
+      <categories>
+        <category>Emuelec</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Armbian系列教程-解决安装某些程序卡死问题</title>
     <url>/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/</url>
     <content><![CDATA[<h1 id="解决Armbian安装程序卡死的问题"><a href="#解决Armbian安装程序卡死的问题" class="headerlink" title="解决Armbian安装程序卡死的问题"></a>解决Armbian安装程序卡死的问题</h1><h2 id="一、起因"><a href="#一、起因" class="headerlink" title="一、起因"></a>一、起因</h2><p>在我安装python3的moviepy库时，总是在同一个地方卡死，不管重试多少次安装命令，都在同一个地方卡死，于是在网上找了很久，发现了这篇文章“<a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a>”，看了之后发现树莓派的系统和我使用的Armbian系统，具有很高的形似度，于是尝试使用上面的方法解决我遇到的问题，顺利解决了安装程序卡死的问题，下面是详细的解决方法。</p>
@@ -376,6 +376,61 @@
 <p>本教程参考以下文章：</p>
 <p><a href="https://blog.csdn.net/lzh_86/article/details/79450793?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">linux下如何保存退出vim编辑器</a></p>
 <p><a href="https://blog.csdn.net/wxz3wxz/article/details/70237302?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2&spm=1001.2101.3001.4242">树莓派编译程序时遇到卡死的问题</a></p>
+]]></content>
+      <categories>
+        <category>Armbian</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>使用ffmpeg推流直播的正确姿势</title>
+    <url>/2020/06/04/ffmpeg/</url>
+    <content><![CDATA[<p>前面写的<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/">Armbian教程（二）</a>简单说明了利用ffmpeg推流到<a href="https://www.bilibili.com/">哔哩哔哩</a>进行直播的方法，但是对于如何实现列表顺序播放和推流命令的意思没有详细的说明，这篇教程来进行讲解。<br>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a><br><img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png"></p>
+<span id="more"></span>
+<h1 id="一、如何实现列表顺序播放"><a href="#一、如何实现列表顺序播放" class="headerlink" title="一、如何实现列表顺序播放"></a>一、如何实现列表顺序播放</h1><h3 id="1、音频文件列表顺序播放"><a href="#1、音频文件列表顺序播放" class="headerlink" title="1、音频文件列表顺序播放"></a>1、音频文件列表顺序播放</h3><p>怎么把音频文件转换成视频在<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里说了就不说了，下面说一下怎么让音频按照你想要的顺序播放：<br>1.把想要合并的mp3文件放到一个文件夹<br>2.对mp3文件进行重命名，按照你想要的顺序在前面加上1、2、3……<br>3.按名称进行排序，然后合并成一个文件，如何合并成一个文件<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里有教。</p>
+<h3 id="2、视频文件列表循环播放"><a href="#2、视频文件列表循环播放" class="headerlink" title="2、视频文件列表循环播放"></a>2、视频文件列表循环播放</h3><p>1.首先新建一个文本文档，命名为mylist.txt。<br>2.编辑mylist.tx的内容，复制下列命令粘贴到mylist.txt里：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#使用同一编码器的文件可以使用这个命令</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file1.wav&#39;</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file2.wav&#39;</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file3.wav&#39;</span><br></pre></td></tr></table></figure>
+<p>其中/path/to/为文件的路径，file1.wav为文件名和扩展名，有多少个视频文件，上面的列表就多少行。</p>
+<h3 id="3、使用命令进行循环推流"><a href="#3、使用命令进行循环推流" class="headerlink" title="3、使用命令进行循环推流"></a>3、使用命令进行循环推流</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -f concat -safe 0 -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;mylist.txt&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>1.新建一个文本文档，复制以下内容，粘贴至文本里：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">while true</span><br><span class="line">do</span><br><span class="line">ffmpeg -f concat -safe 0 -re -i &quot;&#x2F;path&#x2F;to&#x2F;mylist.txt&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>把文本文档重命名为live.sh</p>
+<p>把前面创建的mylist.txt文件和live.sh文件放到视频文件同一目录下。</p>
+<p>3.输入下列命令进行推流</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#screen创建ffmpeg对话框</span><br><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#切换至live.sh文件所在目录</span><br><span class="line">cd &#x2F;path&#x2F;to&#x2F;</span><br><span class="line">#执行命令开始推流</span><br><span class="line">sudo sh live.sh</span><br></pre></td></tr></table></figure>
+
+<p>如果报错执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#切换至live.sh和mylish.txt文件所在目录</span><br><span class="line">cd &#x2F;path&#x2F;to&#x2F;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod +x mylist.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod +x lish.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="推流命令详解"><a href="#推流命令详解" class="headerlink" title="推流命令详解"></a>推流命令详解</h2><p>1.其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。<br>2.当回来时可以执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -r ffmpeg</span><br></pre></td></tr></table></figure>
+<p>即可恢复到离开前创建的ffmpeg会话的工作界面。<br>3.如果忘记了，或者当时没有指定会话名，可以执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -ls</span><br></pre></td></tr></table></figure>
+<p>screen会列出当前存在的会话列表。<br>4.执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo exit</span><br></pre></td></tr></table></figure>
+<p>会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
+<p>5.-re 代表按照帧率发送，否则ffmpeg会一股脑地按最高的效率发送数据</p>
+<p>6.-stream_loop -1循环次数,-1表示无限循环</p>
+<p>7.-i “发送文件路径”指定要发送的源文件</p>
+<p>8.-vcodec copy 表示视频解码使用原有格式，如果报错可以修改类型，如使用-vcodec h264</p>
+<p>9.-acodec aac 表示声音解码使用AAC格式，未设定时则使用与输入流相同的编解码器</p>
+<p>10.#-b:v 1500k 指定视频码率为1500k,未设定时默认为200Kbit/s</p>
+<p>11.#-b:a 320k 指定音频码率为320k</p>
+<p>12.#-r 60 指定帧率为60帧/s，如果不写这个参数默认为25，要原视频支持60帧，否则意义不大，不影响推流</p>
+<p>13.-f flv 设定输出格式为flv</p>
+<p>14.”rtmp地址和直播码” 推流的目标地址</p>
+<p>本教程参考以下文章：<br><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a><br><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a><br><a href="https://trac.ffmpeg.org/wiki/Concatenate">ffmpeg</a></p>
+<p><a href="https://www.cnblogs.com/LittleHann/p/3862652.html">liunx文件权限</a></p>
 ]]></content>
       <categories>
         <category>Armbian</category>
@@ -438,89 +493,6 @@
       </categories>
   </entry>
   <entry>
-    <title>使用ffmpeg推流直播的正确姿势</title>
-    <url>/2020/06/04/ffmpeg/</url>
-    <content><![CDATA[<p>前面写的<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B%E4%BA%8C/">Armbian教程（二）</a>简单说明了利用ffmpeg推流到<a href="https://www.bilibili.com/">哔哩哔哩</a>进行直播的方法，但是对于如何实现列表顺序播放和推流命令的意思没有详细的说明，这篇教程来进行讲解。<br>已经搭建好的直播间：<a href="https://live.bilibili.com/7123399">https://live.bilibili.com/7123399</a><br><img src="https://img.imgdb.cn/item/607b23358322e6675cb86caf.png"></p>
-<span id="more"></span>
-<h1 id="一、如何实现列表顺序播放"><a href="#一、如何实现列表顺序播放" class="headerlink" title="一、如何实现列表顺序播放"></a>一、如何实现列表顺序播放</h1><h3 id="1、音频文件列表顺序播放"><a href="#1、音频文件列表顺序播放" class="headerlink" title="1、音频文件列表顺序播放"></a>1、音频文件列表顺序播放</h3><p>怎么把音频文件转换成视频在<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里说了就不说了，下面说一下怎么让音频按照你想要的顺序播放：<br>1.把想要合并的mp3文件放到一个文件夹<br>2.对mp3文件进行重命名，按照你想要的顺序在前面加上1、2、3……<br>3.按名称进行排序，然后合并成一个文件，如何合并成一个文件<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B-ffmpeg/">Armbian教程（二）</a>里有教。</p>
-<h3 id="2、视频文件列表循环播放"><a href="#2、视频文件列表循环播放" class="headerlink" title="2、视频文件列表循环播放"></a>2、视频文件列表循环播放</h3><p>1.首先新建一个文本文档，命名为mylist.txt。<br>2.编辑mylist.tx的内容，复制下列命令粘贴到mylist.txt里：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#使用同一编码器的文件可以使用这个命令</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file1.wav&#39;</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file2.wav&#39;</span><br><span class="line">file &#39;&#x2F;path&#x2F;to&#x2F;file3.wav&#39;</span><br></pre></td></tr></table></figure>
-<p>其中/path/to/为文件的路径，file1.wav为文件名和扩展名，有多少个视频文件，上面的列表就多少行。</p>
-<h3 id="3、使用命令进行循环推流"><a href="#3、使用命令进行循环推流" class="headerlink" title="3、使用命令进行循环推流"></a>3、使用命令进行循环推流</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ffmpeg -f concat -safe 0 -re -stream_loop -1 -i &quot;&#x2F;path&#x2F;to&#x2F;mylist.txt&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>1.新建一个文本文档，复制以下内容，粘贴至文本里：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">while true</span><br><span class="line">do</span><br><span class="line">ffmpeg -f concat -safe 0 -re -i &quot;&#x2F;path&#x2F;to&#x2F;mylist.txt&quot; -vcodec copy -acodec aac -b:v 1500k -b:a 320k -r 60 -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<p>把文本文档重命名为live.sh</p>
-<p>把前面创建的mylist.txt文件和live.sh文件放到视频文件同一目录下。</p>
-<p>3.输入下列命令进行推流</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#screen创建ffmpeg对话框</span><br><span class="line">sudo screen -S ffmpeg</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#切换至live.sh文件所在目录</span><br><span class="line">cd &#x2F;path&#x2F;to&#x2F;</span><br><span class="line">#执行命令开始推流</span><br><span class="line">sudo sh live.sh</span><br></pre></td></tr></table></figure>
-
-<p>如果报错执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#切换至live.sh和mylish.txt文件所在目录</span><br><span class="line">cd &#x2F;path&#x2F;to&#x2F;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod +x mylist.txt</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo chmod +x lish.sh</span><br></pre></td></tr></table></figure>
-
-<h2 id="推流命令详解"><a href="#推流命令详解" class="headerlink" title="推流命令详解"></a>推流命令详解</h2><p>1.其中screen -S ffmpeg，该命令主要是避免网络中断或是断开putty的情况下中断了命令的执行，它可以保证命令会在后台继续执行。<br>2.当回来时可以执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -r ffmpeg</span><br></pre></td></tr></table></figure>
-<p>即可恢复到离开前创建的ffmpeg会话的工作界面。<br>3.如果忘记了，或者当时没有指定会话名，可以执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo screen -ls</span><br></pre></td></tr></table></figure>
-<p>screen会列出当前存在的会话列表。<br>4.执行：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo exit</span><br></pre></td></tr></table></figure>
-<p>会提示：[screen is terminating]，表示已经成功退出screen会话。</p>
-<p>5.-re 代表按照帧率发送，否则ffmpeg会一股脑地按最高的效率发送数据</p>
-<p>6.-stream_loop -1循环次数,-1表示无限循环</p>
-<p>7.-i “发送文件路径”指定要发送的源文件</p>
-<p>8.-vcodec copy 表示视频解码使用原有格式，如果报错可以修改类型，如使用-vcodec h264</p>
-<p>9.-acodec aac 表示声音解码使用AAC格式，未设定时则使用与输入流相同的编解码器</p>
-<p>10.#-b:v 1500k 指定视频码率为1500k,未设定时默认为200Kbit/s</p>
-<p>11.#-b:a 320k 指定音频码率为320k</p>
-<p>12.#-r 60 指定帧率为60帧/s，如果不写这个参数默认为25，要原视频支持60帧，否则意义不大，不影响推流</p>
-<p>13.-f flv 设定输出格式为flv</p>
-<p>14.”rtmp地址和直播码” 推流的目标地址</p>
-<p>本教程参考以下文章：<br><a href="https://www.chenxublog.com/2017/06/02/raspi-live-24h-bilibili.html">晨旭的博客</a><br><a href="https://www.jianshu.com/p/0b1d03e2f0f4">简书：夕枫晚照</a><br><a href="https://trac.ffmpeg.org/wiki/Concatenate">ffmpeg</a></p>
-<p><a href="https://www.cnblogs.com/LittleHann/p/3862652.html">liunx文件权限</a></p>
-]]></content>
-      <categories>
-        <category>Armbian</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>白嫖各大平台VIP内容</title>
-    <url>/2020/06/23/%E7%99%BD%E5%AB%96/</url>
-    <content><![CDATA[<h1 id="一、各大视频网站"><a href="#一、各大视频网站" class="headerlink" title="一、各大视频网站"></a>一、各大视频网站</h1><p>现在越来越多的内容开始收费下载或者需要会员才能观看，但是一些网站就算买了会员，体验也一样很差，所以今天教大家一个不需要VIP也能观看和下载VIP内容的方法。因为是网页所以不管是电脑还是移动设备教程都是通用的！</p>
-<p>该教程仅供技术交流使用！请勿恶意使用！</p>
-<span id="more"></span>
-
-<h3 id="视频类网站"><a href="#视频类网站" class="headerlink" title="视频类网站"></a>视频类网站</h3><p>以腾讯视频为例，用浏览器打开腾讯视频，找到你想看的视频，在网址https://后面加上wn.run/,然后回车就看到进入一个新的网页了，在这个网页随便选择一个工具开始解析，解析完就能观看VIP视频了。具体请看图！</p>
-<p>这个代码使用范围请自行摸索，需要VIP的网站就可以试一试。</p>
-<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8827.png" >
-
-<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8836.png" >
-
-<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8807.png" >
-
-
-
-<h3 id="百度文库"><a href="#百度文库" class="headerlink" title="百度文库"></a>百度文库</h3><p>首先找到你要下载的文档，然后在baidu后面加上vvv按回车，会进入一个新的页面，然后选择下载就行了。具体请看图！</p>
-<p>也可以用使用wn.run/来下载，使用方法如上。</p>
-<img src="https://img.imgdb.cn/item/60803514d829612bed9af3c0.png" >
-
-
-
-<img src="https://img.imgdb.cn/item/60803514d829612bed9af3b8.png" >]]></content>
-      <categories>
-        <category>杂七杂八</category>
-      </categories>
-  </entry>
-  <entry>
     <title>影视资源站-站长必备</title>
     <url>/2021/05/09/ziyuan/</url>
     <content><![CDATA[<h2 id="影视资源站推荐"><a href="#影视资源站推荐" class="headerlink" title="影视资源站推荐"></a>影视资源站推荐</h2><p>天空资源站： <a href="http://www.tiankongzy.com/">http://www.tiankongzy.com/</a> </p>
@@ -536,45 +508,6 @@
 ]]></content>
       <categories>
         <category>苹果CMS</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>影视网站推荐</title>
-    <url>/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h3 id="一、在线观看"><a href="#一、在线观看" class="headerlink" title="一、在线观看"></a>一、在线观看</h3><p><a href="https://www.novipnoad.com/">NO视频 – 不负追剧好时光 (￣▽￣)”</a></p>
-<p>优点：无广告，清晰度高，大部分资源都是1080P</p>
-<span id="more"></span>
-
-<p>缺点：访问速度慢，视频加载慢</p>
-<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416a72.png" >
-
-
-
-<p><a href="http://www.xmdnovels.top/">玄名的视频小站</a></p>
-<p>优点：资源多，清晰度高，无广告，更新速度快</p>
-<p>缺点：资源有水印，加载速度一般，晚上播放卡</p>
-<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416ac1.png" >
-
-
-
-<p><a href="https://www.mypianku.net/">片库</a></p>
-<p>优点：资源多，无广告，可在线可下载，更新速度快</p>
-<p>缺点：资源有水印，加载速度一般</p>
-<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416aa1.png" >
-
-<h3 id="二、影视资源下载"><a href="#二、影视资源下载" class="headerlink" title="二、影视资源下载"></a>二、影视资源下载</h3><p><a href="https://www.bd-film.com/">BD影视</a></p>
-<p>优点：访问速度快，资源多，大部分资源为1080P，更新速度快</p>
-<p>缺点：资源有水印</p>
-<img src="https://img.imgdb.cn/item/6081a87fd1a9ae528f5ea478.png" >
-
-
-
-<p><a href="https://www.ygdy8.com/index.html">阳光电影</a></p>
-<p>优点：资源多，更新速度快，大部分资源为1080P</p>
-<p>缺点：有广告，资源有水印</p>
-<img src="https://img.imgdb.cn/item/6081a939d1a9ae528f66dcba.png" >]]></content>
-      <categories>
-        <category>杂七杂八</category>
       </categories>
   </entry>
   <entry>
@@ -616,11 +549,78 @@
       </categories>
   </entry>
   <entry>
+    <title>白嫖各大平台VIP内容</title>
+    <url>/2020/06/23/%E7%99%BD%E5%AB%96/</url>
+    <content><![CDATA[<h1 id="一、各大视频网站"><a href="#一、各大视频网站" class="headerlink" title="一、各大视频网站"></a>一、各大视频网站</h1><p>现在越来越多的内容开始收费下载或者需要会员才能观看，但是一些网站就算买了会员，体验也一样很差，所以今天教大家一个不需要VIP也能观看和下载VIP内容的方法。因为是网页所以不管是电脑还是移动设备教程都是通用的！</p>
+<p>该教程仅供技术交流使用！请勿恶意使用！</p>
+<span id="more"></span>
+
+<h3 id="视频类网站"><a href="#视频类网站" class="headerlink" title="视频类网站"></a>视频类网站</h3><p>以腾讯视频为例，用浏览器打开腾讯视频，找到你想看的视频，在网址https://后面加上wn.run/,然后回车就看到进入一个新的网页了，在这个网页随便选择一个工具开始解析，解析完就能观看VIP视频了。具体请看图！</p>
+<p>这个代码使用范围请自行摸索，需要VIP的网站就可以试一试。</p>
+<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8827.png" >
+
+<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8836.png" >
+
+<img src="https://img.imgdb.cn/item/608032d6d829612bed8d8807.png" >
+
+
+
+<h3 id="百度文库"><a href="#百度文库" class="headerlink" title="百度文库"></a>百度文库</h3><p>首先找到你要下载的文档，然后在baidu后面加上vvv按回车，会进入一个新的页面，然后选择下载就行了。具体请看图！</p>
+<p>也可以用使用wn.run/来下载，使用方法如上。</p>
+<img src="https://img.imgdb.cn/item/60803514d829612bed9af3c0.png" >
+
+
+
+<img src="https://img.imgdb.cn/item/60803514d829612bed9af3b8.png" >]]></content>
+      <categories>
+        <category>杂七杂八</category>
+      </categories>
+  </entry>
+  <entry>
     <title>视频</title>
     <url>/2021/05/12/%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<h1 id="不买立省百分百"><a href="#不买立省百分百" class="headerlink" title="不买立省百分百"></a>不买立省百分百</h1><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe 
 src="//player.bilibili.com/player.html?aid=87739724&bvid=BV1g7411b7Ux&cid=156638179&page=1" scrolling="no" border="0" 
 frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+      <categories>
+        <category>杂七杂八</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>影视网站推荐</title>
+    <url>/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h3 id="一、在线观看"><a href="#一、在线观看" class="headerlink" title="一、在线观看"></a>一、在线观看</h3><p><a href="https://www.novipnoad.com/">NO视频 – 不负追剧好时光 (￣▽￣)”</a></p>
+<p>优点：无广告，清晰度高，大部分资源都是1080P</p>
+<span id="more"></span>
+
+<p>缺点：访问速度慢，视频加载慢</p>
+<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416a72.png" >
+
+
+
+<p><a href="http://www.xmdnovels.top/">玄名的视频小站</a></p>
+<p>优点：资源多，清晰度高，无广告，更新速度快</p>
+<p>缺点：资源有水印，加载速度一般，晚上播放卡</p>
+<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416ac1.png" >
+
+
+
+<p><a href="https://www.mypianku.net/">片库</a></p>
+<p>优点：资源多，无广告，可在线可下载，更新速度快</p>
+<p>缺点：资源有水印，加载速度一般</p>
+<img src="https://img.imgdb.cn/item/6081a5f1d1a9ae528f416aa1.png" >
+
+<h3 id="二、影视资源下载"><a href="#二、影视资源下载" class="headerlink" title="二、影视资源下载"></a>二、影视资源下载</h3><p><a href="https://www.bd-film.com/">BD影视</a></p>
+<p>优点：访问速度快，资源多，大部分资源为1080P，更新速度快</p>
+<p>缺点：资源有水印</p>
+<img src="https://img.imgdb.cn/item/6081a87fd1a9ae528f5ea478.png" >
+
+
+
+<p><a href="https://www.ygdy8.com/index.html">阳光电影</a></p>
+<p>优点：资源多，更新速度快，大部分资源为1080P</p>
+<p>缺点：有广告，资源有水印</p>
+<img src="https://img.imgdb.cn/item/6081a939d1a9ae528f66dcba.png" >]]></content>
       <categories>
         <category>杂七杂八</category>
       </categories>
