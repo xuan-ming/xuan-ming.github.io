@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Armbian搭建视频网站-安装苹果CMS |  玄名的博客</title>
+      <title>Armbian搭建视频网站系列教程-安装苹果CMS |  玄名的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -66,7 +66,7 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Armbian搭建视频网站-安装苹果CMS
+  Armbian搭建视频网站系列教程-安装苹果CMS
 </h1>
  
 
@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">296</span>
+            <span class="post-count">454</span>
         </span>
     </span>
 
@@ -110,19 +110,29 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p>
+  <h3 id="一、安装之前的准备工作"><a href="#一、安装之前的准备工作" class="headerlink" title="一、安装之前的准备工作"></a>一、安装之前的准备工作</h3><p>首先把苹果CMSV10下载好<a target="_blank" rel="noopener" href="https://www.mytheme.cn/article/189.html">点这里</a>，注意要下载最新的版本，下载之后，登录宝塔面板，点击软件管理，找到刚刚安装好的PHP7.2，点击设置，选择安装扩展，安装fileinfo扩展。</p>
+<img src="https://pic.imgdb.cn/item/60eb0f145132923bf8246c5b.png">
+
 <span id="more"></span>
 
-<img src="https://pic.imgdb.cn/item/60c22617844ef46bb217e662.jpg">
+<p>安装fileinfo扩展之后，点击网站-添加站点，域名这里如果你有可用的域名就填域名，没有就填内网IP，然后创建数据库，它会自动生成账号密码，记得把账号密码粘贴保存出来，等会儿要用，最后点击提交。</p>
+<img src="https://pic.imgdb.cn/item/60eb109e5132923bf830bc28.png">
 
-<h4 id="1-1、下载苹果CMS"><a href="#1-1、下载苹果CMS" class="headerlink" title="1.1、下载苹果CMS"></a>1.1、下载苹果CMS</h4><p>到这里面<a target="_blank" rel="noopener" href="https://www.mytheme.cn/article/189.html">点这里</a>，下载最新的苹果CMSV10版本，不要下错了。</p>
+<p>这时候你在浏览器输入IP地址，就能看到以下信息了，到这里准备工作就完成了。</p>
+<img src="https://pic.imgdb.cn/item/60eb126c5132923bf83f2b77.png">
+
 <h3 id="二、安装苹果CMS"><a href="#二、安装苹果CMS" class="headerlink" title="二、安装苹果CMS"></a>二、安装苹果CMS</h3><p>安装苹果CMS有两个方法，一个是宝塔面板的一键部署，可以一键部署苹果CMS，但是我没用过，所以主要介绍第二种方法。</p>
-<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把刚刚下载的苹果CMSV10文件，上传到目录下，上传完之后解压到当前目录下。</p>
-<img src="https://pic.imgdb.cn/item/60c2291f844ef46bb256e630.jpg">
+<p>首先在宝塔面板界面点击文件，进入你刚刚创建的目录下，把目录下的文件都删除，然后点击上传把你下载的苹果CMSV10的压缩包上传到目录，上传之后把文件解压到当前目录下。</p>
+<img src="https://pic.imgdb.cn/item/60eb13345132923bf845285d.png">
 
 <img src="https://pic.imgdb.cn/item/60c2294b844ef46bb25a8348.jpg">
 
-<p>解压之后，在浏览器中输入设备的IP地址/admin.php，进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，在浏览器里输入你的IP地址就能看到网址首页了。</p>
+<p>解压之后，在浏览器输入IP地址，就会自动进入安装界面，按照步骤一步步来，数据库配置里的信息，就是前面让你保存的东西，把它粘贴进去就行了。安装完成之后，它会让你修改admin.php文件名称，进宝塔面板里找到它然后修改就行，修改之后进入后台就是IP地址/你修改的名字.php，进入后台登录界面了！在浏览器里输入你的IP地址就能看到网址首页了。</p>
+<img src="https://pic.imgdb.cn/item/60eb13ad5132923bf848f5ec.png">
+
+<img src="https://pic.imgdb.cn/item/60eb15285132923bf855c81c.png">
+
+<img src="https://pic.imgdb.cn/item/60eb15f15132923bf85c36c6.png">
  
       <!-- reward -->
       
@@ -204,19 +214,10 @@ var _hmt = _hmt || [];
    
   <nav class="article-nav">
     
-      <a href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Armbian搭建视频网址-更换网站模板和采集
-          
-        </div>
-      </a>
-    
     
       <a href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Armbian搭建视频网站-安装宝塔面板</div>
+        <div class="article-nav-title">Armbian搭建视频网站系列教程-安装宝塔面板</div>
       </a>
     
   </nav>

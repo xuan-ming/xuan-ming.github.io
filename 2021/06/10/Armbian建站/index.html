@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Armbian搭建视频网站-安装宝塔面板 |  玄名的博客</title>
+      <title>Armbian搭建视频网站系列教程-安装宝塔面板 |  玄名的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -66,7 +66,7 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Armbian搭建视频网站-安装宝塔面板
+  Armbian搭建视频网站系列教程-安装宝塔面板
 </h1>
  
 
@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">574</span>
+            <span class="post-count">590</span>
         </span>
     </span>
 
@@ -110,22 +110,27 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="一、安装宝塔面板"><a href="#一、安装宝塔面板" class="headerlink" title="一、安装宝塔面板"></a>一、安装宝塔面板</h3><p>首先按照我之前写的教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian，按照教程设置完之后，打开终端输入下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install-ubuntu.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
-
-<p>安装过程比较缓慢，请耐心等待安装完成。</p>
+  <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><p>首先按照我之前写的这篇教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian并设置好Armabin，然后按照这篇教程<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">点这里</a>完成相应的设置之后，准备工作就完成了，可以进入下一步了。</p>
 <span id="more"></span>
 
-<h3 id="二、建站之前的准备工作"><a href="#二、建站之前的准备工作" class="headerlink" title="二、建站之前的准备工作"></a>二、建站之前的准备工作</h3><p>安装完之后，它会给出你的宝塔面板访问地址、账号和密码，请复制下来保存之后会用到。</p>
-<p>复制访问地址到浏览器打开，会进入宝塔面板的登录界面，这时候说明宝塔面板安装完成了，但是有一个问题，就是我没有公网IP，所以无法访问，这时候只要把IP地址改成当前设备的内网IP地址就能正常访问了。然后输入刚刚让你保存的账号密码登录就行了。</p>
-<p>终端输入以下命令查询设备的IP地址，当然你也可以登录路由器后台来查看设备IP。</p>
+<h3 id="二、安装宝塔面板"><a href="#二、安装宝塔面板" class="headerlink" title="二、安装宝塔面板"></a>二、安装宝塔面板</h3><p>打开putty，输入IP地址，连接上你的设备，然后执行下面的安装命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install-ubuntu.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
+<p>安装中途让你输入y或n的时候，输入y并回车，安装过程比较缓慢，请耐心等待安装完成。</p>
+<img src="https://pic.imgdb.cn/item/60eac9a85132923bf8c1f022.png">
+
+<p>安装完之后，它会给出你的宝塔面板访问地址、账号和密码，请复制下来保存，之后会用到。</p>
+<img src="https://pic.imgdb.cn/item/60eacbb35132923bf8c93144.png">
+
+<p>如果你的设备用的是公网IP，那么直接复制它给的访问地址到浏览器打开就行，如果没有的话，就把给出的访问地址中的IP地址换成你当前设备的IP地址，然后复制到浏览器访问就行。账号密码就是刚刚让你保存下来的东西，复制粘贴就好了。</p>
+<p>你可以在终端输入以下命令查询设备的IP地址，也可以登录路由器后台来查看设备IP。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -a</span><br></pre></td></tr></table></figure>
 
 <img src="https://pic.imgdb.cn/item/60c21b9e844ef46bb223de37.jpg">
 
-<img src="https://pic.imgdb.cn/item/60d02f4b844ef46bb2c7daa1.jpg">
+<h4 id="2-1、安装LNMP或LAMP"><a href="#2-1、安装LNMP或LAMP" class="headerlink" title="2.1、安装LNMP或LAMP"></a>2.1、安装LNMP或LAMP</h4><img src="https://pic.imgdb.cn/item/60eace315132923bf8d213f6.png">
 
-<h4 id="2-1、安装LNMP或LAMP"><a href="#2-1、安装LNMP或LAMP" class="headerlink" title="2.1、安装LNMP或LAMP"></a>2.1、安装LNMP或LAMP</h4><p>当你登录宝塔面板之后，它就会弹出窗口让你安装LNMP或LAMP，想安装哪个随意，LNMP貌似好一点，但是要注意一下版本，因为设备硬件的原因，太高的版本安装不上去，我安装的是Apache2.4，MySQL5.5和PHP7.2的版本，然后点击安装，我选择的是极速安装，但是听说编译安装更稳定，之后就是漫长的等待了，可能需要5h左右。安装完成之后，还需要安装PHP的fileinfo扩展，不然部署苹果CMS时会报错。</p>
+<p>登录宝塔面板之后，它就会弹出窗口让你安装LNMP或LAMP，要注意一下版本，因为设备硬件的原因，太高的版本安装不上去，我安装的是Apache2.4，MySQL5.5和PHP7.2的版本，如图所示，然后点击编译安装，之后就是漫长的等待了，可能需要4-5小时左右，把窗口最小化然后去干点别的吧。</p>
 <h4 id="2-2、固定设备IP地址"><a href="#2-2、固定设备IP地址" class="headerlink" title="2.2、固定设备IP地址"></a>2.2、固定设备IP地址</h4><p>最后我们还需要在路由器后台把设备的IP地址固定下来，不然你每一次重启设备，IP地址都会变很麻烦，首先登录路由器后台，登录之后找到DHCP服务器这个选项，打开客户端列表，找到设备复制它的MAC地址和IP地址，然后打开静态地址保留，添加新条目，把刚刚复制的MAC地址和IP地址粘贴进去保存，这样就完成了。到了这里建站前准备工作就都完成了。</p>
  
       <!-- reward -->
@@ -212,7 +217,7 @@ var _hmt = _hmt || [];
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Armbian搭建视频网站-安装苹果CMS
+            Armbian搭建视频网站系列教程-安装苹果CMS
           
         </div>
       </a>

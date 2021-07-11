@@ -151,61 +151,6 @@ var _hmt = _hmt || [];
     
     
     <article
-  id="post-Armbian建站三"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/"
-    >Armbian搭建视频网址-更换网站模板和采集</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/" class="article-date">
-  <time datetime="2021-06-10T15:14:12.000Z" itemprop="datePublished">2021-06-10</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Armbian/">Armbian</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="一、网站美化"><a href="#一、网站美化" class="headerlink" title="一、网站美化"></a>一、网站美化</h3><p>苹果CMS自带的模板有点欣赏不来，于是在网上找到一个免费模板自己改了改，凑合着用。模板下载<a target="_blank" rel="noopener" href="https://www.mytheme.cn/mulu1/maccmsv10">点这里</a>。</p> 
-      <a class="article-more-link" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
   id="post-Armbian建站二"
   class="article article-type-post"
   itemscope
@@ -218,7 +163,7 @@ var _hmt = _hmt || [];
        
 <h2 itemprop="name">
   <a class="article-title" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/"
-    >Armbian搭建视频网站-安装苹果CMS</a> 
+    >Armbian搭建视频网站系列教程-安装苹果CMS</a> 
 </h2>
  
 
@@ -237,7 +182,8 @@ var _hmt = _hmt || [];
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h3><p>首先登录宝塔面板，点击网址，添加站点，如果你还没有域名就填写你的内网IP，创建数据库，提交。创建完成之后把它给你的账号密码复制下来保存等会儿要用。</p> 
+  <h3 id="一、安装之前的准备工作"><a href="#一、安装之前的准备工作" class="headerlink" title="一、安装之前的准备工作"></a>一、安装之前的准备工作</h3><p>首先把苹果CMSV10下载好<a target="_blank" rel="noopener" href="https://www.mytheme.cn/article/189.html">点这里</a>，注意要下载最新的版本，下载之后，登录宝塔面板，点击软件管理，找到刚刚安装好的PHP7.2，点击设置，选择安装扩展，安装fileinfo扩展。</p>
+<img src="https://pic.imgdb.cn/item/60eb0f145132923bf8246c5b.png"> 
       <a class="article-more-link" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/"
         >阅读全文</a
       >
@@ -273,7 +219,7 @@ var _hmt = _hmt || [];
        
 <h2 itemprop="name">
   <a class="article-title" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/"
-    >Armbian搭建视频网站-安装宝塔面板</a> 
+    >Armbian搭建视频网站系列教程-安装宝塔面板</a> 
 </h2>
  
 
@@ -292,10 +238,7 @@ var _hmt = _hmt || [];
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="一、安装宝塔面板"><a href="#一、安装宝塔面板" class="headerlink" title="一、安装宝塔面板"></a>一、安装宝塔面板</h3><p>首先按照我之前写的教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian，按照教程设置完之后，打开终端输入下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install-ubuntu.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
-
-<p>安装过程比较缓慢，请耐心等待安装完成。</p> 
+  <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><p>首先按照我之前写的这篇教程<a href="https://xuan-ming.github.io/2020/06/03/Armbian%E6%95%99%E7%A8%8B/">点这里</a>刷入Armbian并设置好Armabin，然后按照这篇教程<a href="https://xuan-ming.github.io/2020/08/06/armbian%E6%95%99%E7%A8%8B%E4%B8%89/">点这里</a>完成相应的设置之后，准备工作就完成了，可以进入下一步了。</p> 
       <a class="article-more-link" href="/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/"
         >阅读全文</a
       >
@@ -684,12 +627,70 @@ frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolu
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>2021年4月23日：更新了文章：<a href="https://xuan-ming.github.io/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">影视网站推荐</a></p>
-<p>2021年4月19日：修改了404页面，换成404公益页面</p>
-<p>2021年4月18日：修改了友链样式</p>
-<p>2021年4月18日：评论邮件提醒挂了（没钱修复）</p>
-<p>2021年4月18日：添加了浏览器搞怪标题栏</p> 
+  <p>2021年6月10日：更新了文章：<a href="https://xuan-ming.github.io/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%B8%89/">Armbian搭建视频网址-更换网站模板和采集 </a></p>
+<p>2021年6月10日：更新了文章：<a href="https://xuan-ming.github.io/2021/06/10/Armbian%E5%BB%BA%E7%AB%99%E4%BA%8C/">Armbian搭建视频网站-安装苹果CMS </a></p>
+<p>2021年6月10日：更新了文章：<a href="https://xuan-ming.github.io/2021/06/10/Armbian%E5%BB%BA%E7%AB%99/">Armbian搭建视频网站-安装宝塔面板 </a></p>
+<p>2021年4月23日：更新了文章：<a href="https://xuan-ming.github.io/2021/04/23/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">影视网站推荐</a></p>
+<p>2021年4月19日：修改了404页面，换成404公益页面</p> 
       <a class="article-more-link" href="/2020/07/08/%E6%97%A5%E5%BF%97/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Emuelec3"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/07/07/Emuelec3/"
+    >Emuelec纯净版使用方法（三）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/07/07/Emuelec3/" class="article-date">
+  <time datetime="2020-07-07T14:41:56.000Z" itemprop="datePublished">2020-07-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Emuelec/">Emuelec</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <img src="https://img.imgdb.cn/item/607b24158322e6675cb999af.jpg">
+
+<h1 id="Emuelec主题"><a href="#Emuelec主题" class="headerlink" title="Emuelec主题"></a>Emuelec主题</h1><p>Emuelec默认主题有一点太朴实了，个人不太喜欢，于是在网上找到一个个人比较喜欢的主题分享给大家。</p>
+<p>首先放几张图给大家看看：</p> 
+      <a class="article-more-link" href="/2020/07/07/Emuelec3/"
         >阅读全文</a
       >
        
