@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xuan-ming.github.io/friends/index.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xuan-ming.github.io/friends/links.json</loc>
     
     <lastmod>2022-07-06</lastmod>
@@ -185,6 +176,15 @@
     <loc>https://xuan-ming.github.io/2020/12/19/maccms/</loc>
     
     <lastmod>2021-04-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuan-ming.github.io/friends/index.html</loc>
+    
+    <lastmod>2021-04-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
